@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukids | The Future of Indian Primary Education</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Specific Hero styles matching Edukids screenshot */
+        .hero-images-container { position: relative; width: 500px; height: 500px; margin: 0 auto; }
+        .circle-hero-1 { width: 320px; height: 320px; border-radius: 50%; border: 8px solid white; box-shadow: 0 30px 60px rgba(0,0,0,0.1); position: absolute; top: 0; left: 0; z-index: 2; object-fit: cover; }
+        .circle-hero-2 { width: 380px; height: 380px; border-radius: 50%; border: 8px solid var(--accent-yellow); box-shadow: 0 30px 60px rgba(0,0,0,0.1); position: absolute; bottom: 0; right: 0; z-index: 1; object-fit: cover; }
+        .stat-badge-1 { top: 40%; left: -60px; }
+        .stat-badge-2 { bottom: 30%; right: -60px; }
+
+        /* Program pills from screenshot */
+        .program-pills { background: var(--primary-navy); padding: 60px; border-radius: 40px; color: white; display: flex; justify-content: space-between; align-items: center; margin-top: -60px; position: relative; z-index: 10; }
+        .program-pill-item { text-align: center; flex: 1; transition: var(--transition); padding: 20px; border-radius: 20px; }
+        .program-pill-item:hover { background: rgba(255,255,255,0.05); }
+
+        /* FAQ Accordion */
+        .faq-item { background: var(--white); border-radius: 20px; margin-bottom: 15px; overflow: hidden; border: 1px solid #f1f1f1; }
+        .faq-header { padding: 25px 35px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700; transition: var(--transition); color: var(--primary-navy); }
+        .faq-header:hover { background: #fcfcfc; }
+        .faq-body { padding: 0 35px; max-height: 0; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); opacity: 0; color: var(--text-muted); }
+        .faq-item.active .faq-body { padding: 0 35px 35px; max-height: 300px; opacity: 1; }
+        .faq-item.active .faq-header i { transform: rotate(180deg); color: var(--accent-orange); }
+
+        /* Testimonials */
+        .testimonial-card { background: white; padding: 40px; border-radius: 30px; border: 1px solid rgba(0,0,0,0.03); box-shadow: var(--shadow-soft); transition: var(--transition); }
+        .testimonial-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-medium); }
+    </style>
+</head>
+<body>
+
+    <header id="header-placeholder"></header>
+
+    <main>
+        <!-- 1. HOME BANNER (HERO) -->
+        <section class="hero">
+            <div class="container grid-2">
+                <div class="hero-content">
+                    <h1 class="hero-title">Better Future For <span>Your Kids</span></h1>
+                    <p class="mb-40" style="font-size: 1.25rem; color: var(--text-muted); line-height: 1.8;">Let the child be the director, and the actor in his own play. High-end activity-based learning in Gurgaon.</p>
+                    <a href="admissions.html" class="btn btn-primary" style="background: var(--primary-indigo); padding: 18px 45px; border-radius: 12px; font-weight: 800;">
+                        Get Started 
+                        <span style="background: var(--accent-orange); width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.7rem; margin-left: 10px;"><i class="fas fa-play"></i></span>
+                    </a>
+                    <p class="mt-40" style="font-size: 0.95rem; opacity: 0.7; max-width: 450px;">Real-life workshops, interactive tech labs, and field experience throughout the journey!</p>
+                </div>
+                <div class="hero-images">
+                    <div class="hero-images-container floating">
+                        <img src="girl_hero.png" alt="Indian Girl" class="circle-hero-1">
+                        <img src="hero_main.png" alt="Indian Boy" class="circle-hero-2">
+                        <div class="float-stats stat-badge-1"><i class="fas fa-graduation-cap" style="color: #38bdf8;"></i> 7.5k+ Gifted Students</div>
+                        <div class="float-stats stat-badge-2"><i class="fas fa-rocket" style="color: #10b981;"></i> 50+ Modern Programs</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. PROGRAMS PREVIEW -->
+        <section style="padding: 0 5%;">
+             <div class="container program-pills reveal">
+                <div style="flex: 1; max-width: 250px;"><h2 style="font-size: 1.8rem; margin-bottom: 10px;">Our Focus</h2><p style="opacity: 0.5; font-size: 0.8rem;">Every program is curated for cognitive growth.</p></div>
+                <div class="program-pill-item"><i class="fas fa-brain" style="color: #38bdf8;"></i><h4 style="font-size: 0.9rem;">Creative Thinking</h4><a href="#" style="font-size: 0.7rem; opacity: 0.6;">Learn more <i class="fas fa-arrow-right"></i></a></div>
+                <div class="program-pill-item" style="background: rgba(255,255,255,0.05);"><i class="fas fa-chess" style="color: #fbbf24;"></i><h4 style="font-size: 0.9rem;">Strategic Play</h4><a href="#" style="font-size: 0.7rem; opacity: 0.6;">Learn more <i class="fas fa-arrow-right"></i></a></div>
+                <div class="program-pill-item"><i class="fas fa-microphone" style="color: #fb7185;"></i><h4 style="font-size: 0.9rem;">Public Speaking</h4><a href="#" style="font-size: 0.7rem; opacity: 0.6;">Learn more <i class="fas fa-arrow-right"></i></a></div>
+             </div>
+        </section>
+
+        <!-- 2. ABOUT US PREVIEW -->
+        <section class="reveal">
+            <div class="container grid-2" style="align-items: center;">
+                <div style="position: relative; display: flex; justify-content: center;">
+                    <img src="boy_skateboard.png" alt="About" style="width: 480px; height: 480px; border-radius: 50%; object-fit: cover; border: 15px solid white; box-shadow: var(--shadow-medium);">
+                    <i class="fas fa-star doodle floating" style="top: 0; left: 0; color: #fbbf24; font-size: 3rem; opacity: 1;"></i>
+                    <i class="fas fa-heart doodle" style="bottom: 10%; right: -20px; color: #fb7185; font-size: 2.5rem; opacity: 1;"></i>
+                </div>
+                <div style="padding-left: 60px;">
+                    <span class="section-tag">About Edukids</span>
+                    <h2 class="hero-title" style="font-size: 3.5rem; line-height: 1.1;">Traditional Classes <br>Simplified For Play</h2>
+                    <p style="margin-top: 30px; font-size: 1.1rem; color: var(--text-muted); line-height: 1.8;">We believe the child should be the actor in their own play. Our campus is designed to encourage Peer engagement and long-term focus through curiosity, not pressure.</p>
+                    <ul class="mt-40">
+                        <li class="mb-20" style="font-weight: 700; display: flex; align-items: center; gap: 15px;"><i class="fas fa-check-circle" style="color: #10b981; font-size: 1.4rem;"></i> Personalized Mentor Attention</li>
+                        <li class="mb-20" style="font-weight: 700; display: flex; align-items: center; gap: 15px;"><i class="fas fa-check-circle" style="color: #10b981; font-size: 1.4rem;"></i> Secure GPS-Tracked Campus</li>
+                        <li style="font-weight: 700; display: flex; align-items: center; gap: 15px;"><i class="fas fa-check-circle" style="color: #10b981; font-size: 1.4rem;"></i> Holistic Values & Ethics</li>
+                    </ul>
+                    <a href="about.html" class="btn btn-primary" style="margin-top: 40px; background: var(--primary-navy);">Our Philosophy</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. ADMISSION PROCESS FLOWCHART -->
+        <section style="background: #f8fafc;">
+            <div class="container">
+                <div class="text-center mb-60">
+                    <span class="section-tag" style="background: white;">Step-by-Step</span>
+                    <h2 class="hero-title" style="font-size: 3.5rem;">Admission Pathway</h2>
+                    <p style="margin-top: 20px; color: var(--text-muted);">A seamless digital-first process for modern parents.</p>
+                </div>
+                <div class="process-flow reveal">
+                    <div class="process-step"><i class="fas fa-school"></i> <h4>Visit Us</h4></div>
+                    <div class="process-step"><i class="fas fa-pen-nib"></i> <h4>Apply</h4></div>
+                    <div class="process-step"><i class="fas fa-file-upload"></i> <h4>Documents</h4></div>
+                    <div class="process-step"><i class="fas fa-user-friends"></i> <h4>Chat</h4></div>
+                    <div class="process-step"><i class="fas fa-certificate"></i> <h4>Selection</h4></div>
+                    <div class="process-step"><i class="fas fa-wallet"></i> <h4>Fees</h4></div>
+                    <div class="process-step"><i class="fas fa-user-check"></i> <h4>Enroll</h4></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. GALLERY PREVIEW -->
+        <section class="reveal">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 50px;">
+                    <div><span class="section-tag">Visual Journey</span><h2 class="hero-title" style="font-size: 3.2rem; margin: 0;">Life at Campus</h2></div>
+                    <a href="gallery.html" class="btn btn-primary" style="background: var(--primary-indigo); border-radius: 12px;">Explore Full Gallery</a>
+                </div>
+                <div class="grid-2" style="gap: 30px;">
+                    <img src="gallery.png" alt="Gallery" style="width: 100%; border-radius: 40px; box-shadow: var(--shadow-medium);">
+                    <img src="gallery.png" alt="Gallery" style="width: 100%; border-radius: 40px; box-shadow: var(--shadow-medium); filter: saturate(1.1) brightness(1.05);">
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ACTIVITY (QUIZ) -->
+        <section style="padding: 0 5%;" class="reveal">
+            <div class="container quiz-box">
+                <div class="bg-orange" style="display: flex; align-items: center; justify-content: center; padding: 50px;">
+                    <img src="quiz_section.png" alt="Quiz" style="width: 100%; border-radius: 40px; box-shadow: var(--shadow-medium);">
+                </div>
+                <div class="bg-navy" style="padding: 100px 80px; display: flex; flex-direction: column; justify-content: center;">
+                    <span class="section-tag" style="background: rgba(255,255,255,0.1); color: white;">Play-to-Learn</span>
+                    <h2 style="font-size: 3.5rem; color: white; line-height: 1.1; margin-bottom: 30px;">Online Quiz Games</h2>
+                    <p style="opacity: 0.8; color: white; font-size: 1.2rem; line-height: 1.8;">We gamify every assessment. Your child won't feel like they're being tested, they'll feel like they're winning!</p>
+                    <a href="activities.html" class="btn" style="background: white; color: var(--primary-navy); margin-top: 40px; max-width: 250px; justify-content: center;">Game Library</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS (SUPERSTARS) -->
+        <section class="reveal">
+            <div class="container">
+                 <div class="text-center mb-60">
+                    <span class="section-tag">Superstars</span>
+                    <h2 class="hero-title" style="font-size: 3.2rem;">Month's Highlight</h2>
+                </div>
+                <div class="grid-4" style="gap: 50px;">
+                    <div style="text-align: center;"><img src="student_1.png" alt="Kid" style="width: 180px; height: 180px; border-radius: 50%; border: 6px solid var(--secondary-purple); box-shadow: var(--shadow-soft); margin-bottom: 25px;"><h3>Ananya Roy</h3><p style="opacity: 0.6; font-size: 0.9rem;">Grade 3 Star Learner</p></div>
+                    <div style="text-align: center;"><img src="student_2.png" alt="Kid" style="width: 180px; height: 180px; border-radius: 50%; border: 6px solid #f0fff4; box-shadow: var(--shadow-soft); margin-bottom: 25px;"><h3>Aarav Sing</h3><p style="opacity: 0.6; font-size: 0.9rem;">Chess Junior Champion</p></div>
+                    <div style="text-align: center;"><img src="student_1.png" alt="Kid" style="width: 180px; height: 180px; border-radius: 50%; border: 6px solid #fff5f2; filter: hue-rotate(90deg); box-shadow: var(--shadow-soft); margin-bottom: 25px;"><h3>Isha Patel</h3><p style="opacity: 0.6; font-size: 0.9rem;">Artist of the Month</p></div>
+                    <div style="text-align: center;"><img src="student_2.png" alt="Kid" style="width: 180px; height: 180px; border-radius: 50%; border: 6px solid #eef2ff; filter: saturate(1.2); box-shadow: var(--shadow-soft); margin-bottom: 25px;"><h3>Vihaan Sharma</h3><p style="opacity: 0.6; font-size: 0.9rem;">STEM Lego Lead</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS (PARENT TRUST) -->
+        <section style="background: white;">
+            <div class="container">
+                <div class="text-center mb-60">
+                    <span class="section-tag">Parent Trust</span>
+                    <h2 class="hero-title" style="font-size: 3.2rem;">Shared Journeys</h2>
+                </div>
+                <div class="grid-2" style="gap: 50px;">
+                    <div class="testimonial-card">
+                        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 25px;">
+                            <img src="parent_avatar.png" alt="Parent" style="width: 70px; height: 70px; border-radius: 50%;">
+                            <div><h4 style="margin:0; font-size: 1.2rem;">Sunita Gupta</h4><p style="font-size: 0.85rem; opacity: 0.6;">Mother of Kabir (Grade 2)</p></div>
+                        </div>
+                        <p style="font-style: italic; opacity: 0.8; line-height: 1.8; font-size: 1.1rem;">"Udaaan isn't just a school, it's a second home. The teachers' dedication to Kabir's emotional growth is truly life-changing for us."</p>
+                    </div>
+                     <div class="testimonial-card">
+                        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 25px;">
+                            <img src="parent_avatar.png" alt="Parent" style="width: 70px; height: 70px; border-radius: 50%; filter: saturate(0.8) contrast(1.1);">
+                            <div><h4 style="margin:0; font-size: 1.2rem;">Rajesh Verma</h4><p style="font-size: 0.85rem; opacity: 0.6;">Father of Ananya (Nursery)</p></div>
+                        </div>
+                        <p style="font-style: italic; opacity: 0.8; line-height: 1.8; font-size: 1.1rem;">"Their STEM-based curriculum for such young kids is brilliant. Ananya already talks about 'logic and loops' at home! Wonderful environment."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. BLOGS PREVIEW -->
+        <section class="reveal">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 60px;">
+                    <div><span class="section-tag">Knowledge Hub</span><h2 class="hero-title" style="font-size: 3.2rem; margin: 0;">Parenting Tips</h2></div>
+                    <a href="blog.html" class="btn btn-primary" style="background: var(--primary-indigo); border-radius: 12px;">Full Knowledge Base</a>
+                </div>
+                <div class="grid-2" style="gap: 40px;">
+                    <div style="background: white; border-radius: 40px; box-shadow: var(--shadow-soft); overflow: hidden; border: 1px solid #f8fafc;">
+                        <img src="blog_post.png" alt="Blog" style="width: 100%; height: 280px; object-fit: cover;">
+                        <div style="padding: 45px;">
+                            <span style="font-size: 0.8rem; color: var(--accent-orange); font-weight: 800; text-transform: uppercase;">Growth Hacks</span>
+                            <h3 style="margin-top: 15px; font-size: 1.6rem;">Making Math Fun for Indian Kids</h3>
+                            <p style="opacity: 0.6; margin-top: 20px; line-height: 1.8;">Discover how to use Vedic mental math basics to teach counting at home using simple kitchen objects.</p>
+                        </div>
+                    </div>
+                    <div style="background: white; border-radius: 40px; box-shadow: var(--shadow-soft); overflow: hidden; border: 1px solid #f8fafc;">
+                        <img src="blog_post.png" alt="Blog" style="width: 100%; height: 280px; object-fit: cover; filter: hue-rotate(90deg);">
+                        <div style="padding: 45px;">
+                            <span style="font-size: 0.8rem; color: var(--accent-orange); font-weight: 800; text-transform: uppercase;">Community News</span>
+                            <h3 style="margin-top: 15px; font-size: 1.6rem;">Udaaan Wins Regional STEM Award 2024</h3>
+                            <p style="opacity: 0.6; margin-top: 20px; line-height: 1.8;">Our students topped the science expo with their sustainable smart-city model using LEGO robotics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. FAQ SECTION -->
+        <section class="reveal" style="background: #fdfdfd;">
+            <div class="container">
+                 <div class="text-center mb-60">
+                    <span class="section-tag">Quick Help</span>
+                    <h2 class="hero-title" style="font-size: 3.2rem;">FAQs Overview</h2>
+                </div>
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <div class="faq-header">What is the age criteria for Nursery? <i class="fas fa-plus"></i></div>
+                        <div class="faq-body"><p>For the session 2024-25, child must be born between April 2020 and March 2021.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-header">Do you provide secure school transport? <i class="fas fa-plus"></i></div>
+                        <div class="faq-body"><p>Yes, we have GPS-tracked secure buses with female attendants covering most of Gurgaon.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-header">What is the teacher-student ratio? <i class="fas fa-plus"></i></div>
+                        <div class="faq-body"><p>We maintain a prime 1:15 ratio to ensure deep personal mentoring for every child.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. CONTACT US SECTION (Improved Layout) -->
+        <section class="reveal" style="background-color: #f8fafc; overflow: hidden;">
+            <div class="container grid-2" style="gap: 120px; align-items: center;">
+                <div style="padding-right: 20px;">
+                    <span class="section-tag" style="background: white; color: var(--primary-indigo);">Reach Out</span>
+                    <h2 class="hero-title" style="font-size: 3.2rem; margin-bottom: 20px; line-height: 1.1;">Let's Start a <br>Conversation</h2>
+                    <p class="mb-30" style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.7; opacity: 0.8;">Have an inquiry? Our team is available 9 AM - 5 PM to help you.</p>
+                    
+                    <div style="background: white; padding: 35px; border-radius: 40px; box-shadow: var(--shadow-soft); border: 1px solid rgba(0,0,0,0.02);">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
+                            <div style="width: 45px; height: 45px; background: #fff5f2; color: #fb7185; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><h4 style="margin:0; font-size: 1rem;">Visit Campus</h4><p style="margin-top: 3px; opacity: 0.5; font-size: 0.85rem;">Sector 45, Gurgaon</p></div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
+                            <div style="width: 45px; height: 45px; background: #f0fdf4; color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;"><i class="fas fa-phone-alt"></i></div>
+                            <div><h4 style="margin:0; font-size: 1rem;">Call Admission</h4><p style="margin-top: 3px; opacity: 0.5; font-size: 0.85rem;">+91 98765 43210</p></div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div style="width: 45px; height: 45px; background: #eef2ff; color: #4338ca; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;"><i class="fas fa-envelope"></i></div>
+                            <div><h4 style="margin:0; font-size: 1rem;">Email Support</h4><p style="margin-top: 3px; opacity: 0.5; font-size: 0.85rem;">hello@uddaanschool.in</p></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: white; padding: 50px 45px; border-radius: 50px; box-shadow: var(--shadow-medium); position: relative; border: 1px solid #f8fafc;">
+                    <i class="fas fa-paper-plane doodle" style="top: -15px; right: 15px; font-size: 2.5rem; color: var(--accent-orange); opacity: 0.4; transform: rotate(15deg);"></i>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 30px; color: var(--primary-navy);">Admission Inquiry</h3>
+                    <form id="homeContactForm">
+                        <div style="margin-bottom: 18px;">
+                            <input type="text" placeholder="Parent Full Name" style="width: 100%; padding: 18px; border-radius: 12px; border: 2px solid #f8fafc; background: #f8fafc; font-family: inherit; font-weight: 600;">
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 18px;">
+                            <input type="email" placeholder="Email Address" style="width: 100%; padding: 18px; border-radius: 12px; border: 2px solid #f8fafc; background: #f8fafc; font-family: inherit; font-weight: 600;">
+                            <input type="tel" placeholder="Mobile Number" style="width: 100%; padding: 18px; border-radius: 12px; border: 2px solid #f8fafc; background: #f8fafc; font-family: inherit; font-weight: 600;">
+                        </div>
+                        <div style="margin-bottom: 25px;">
+                            <textarea placeholder="Tell us about your child's needs..." style="width: 100%; padding: 18px; border-radius: 12px; border: 2px solid #f8fafc; background: #f8fafc; height: 85px; font-family: inherit; resize: none; font-weight: 600;"></textarea>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; justify-content: center; height: 60px; border-radius: 15px; font-size: 1.05rem; background: var(--primary-indigo); font-weight: 800; border: none; cursor: pointer;">Send Message <i class="fas fa-chevron-right" style="margin-left: 10px; font-size: 0.8rem;"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="main.js"></script>
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Contact Form Logic
+        const contactForm = document.getElementById('homeContactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you! Your message has been sent to Edukids. Our coordinator will contact you shortly.');
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>

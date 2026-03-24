@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Edukids India | Nurturing Future India</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(rgba(30, 27, 75, 0.9), rgba(67, 56, 202, 0.9)), url('https://images.unsplash.com/photo-1523050335392-9ae8a27d009f?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 120px 5%;
+            text-align: center;
+        }
+
+        .journey-flow { display: flex; flex-direction: column; gap: 40px; position: relative; max-width: 800px; margin: 60px auto; }
+        .journey-step { display: flex; gap: 30px; align-items: center; position: relative; z-index: 2; }
+        .journey-icon { width: 80px; height: 80px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--primary-indigo); box-shadow: var(--shadow-medium); flex-shrink: 0; }
+        .journey-content { background: var(--white); padding: 25px 35px; border-radius: 20px; box-shadow: var(--shadow-soft); flex-grow: 1; }
+        .journey-flow::before { content: ''; position: absolute; left: 40px; top: 40px; bottom: 40px; width: 4px; background: rgba(79, 70, 229, 0.1); z-index: 1; }
+
+        .principal-box { background: var(--secondary-purple); border-radius: 40px; padding: 50px; display: flex; align-items: center; gap: 60px; margin: 100px 0; }
+
+        @media (max-width: 768px) {
+            .principal-box { flex-direction: column; text-align: center; padding: 30px; }
+            .journey-step { flex-direction: column; text-align: center; }
+            .journey-flow::before { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header id="header-placeholder"></header>
+
+    <div class="about-hero">
+        <h1 class="hero-title" style="color: var(--white); font-size: 4rem;">Nurturing India's <br>Future Leaders</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">Proudly grounded in Indian values, while embracing world-class innovation.</p>
+    </div>
+
+    <!-- MISSION & VISION -->
+    <section>
+        <div class="container grid-2" style="gap: 40px;">
+            <div style="background: var(--primary-navy); color: var(--white); border-radius: 40px; padding: 60px;">
+                <i class="fas fa-eye" style="font-size: 3rem; margin-bottom: 30px; opacity: 0.4; color: #38bdf8;"></i>
+                <h2 style="font-size: 2.5rem;">Our Vision</h2>
+                <p style="opacity: 0.8; margin-top: 25px; line-height: 1.8;">To ignite the flame of curiosity in every child, ensuring they grow into emotionally stable and socially responsible citizens of modern India.</p>
+            </div>
+            <div style="background: var(--accent-yellow); border-radius: 40px; padding: 60px;">
+                <i class="fas fa-rocket" style="font-size: 3rem; margin-bottom: 30px; opacity: 0.4; color: var(--primary-indigo);"></i>
+                <h2 style="font-size: 2.5rem;">Our Mission</h2>
+                <p style="margin-top: 25px; line-height: 1.8;">To deliver high-end experiential education that bridges the gap between traditional wisdom and future-ready technology skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE FLOW (ADMISSION IS NOT IN ABOUT PAGE ACCORDING TO USER'S PREVIOUS FLOW, BUT EXPERIENCE FLOW IS IN ABOUT) -->
+    <section style="background: var(--background-soft);">
+        <div class="container">
+            <div class="text-center mb-60">
+                <span class="section-tag">Child Journey</span>
+                <h2 class="hero-title" style="font-size: 3.5rem;">The Udaaan Experience</h2>
+            </div>
+
+            <div class="journey-flow">
+                <div class="journey-step reveal">
+                    <div class="journey-icon"><i class="fas fa-door-open"></i></div>
+                    <div class="journey-content">
+                        <h3 style="margin-bottom: 10px;">1. Warm Indian Welcome</h3>
+                        <p style="opacity: 0.7;">Orientation that makes every parent and child feel like family.</p>
+                    </div>
+                </div>
+                <div class="journey-step reveal">
+                    <div class="journey-icon" style="background: #eef2ff;"><i class="fas fa-heart"></i></div>
+                    <div class="journey-content">
+                        <h3 style="margin-bottom: 10px;">2. Safe Sensory Environment</h3>
+                        <p style="opacity: 0.7;">Modern campus designed for security and sensory development.</p>
+                    </div>
+                </div>
+                <!-- More steps matching user flow -->
+                <div class="journey-step reveal">
+                    <div class="journey-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <div class="journey-content">
+                        <h3 style="margin-bottom: 10px;">3. Activity-Based Learning</h3>
+                        <p style="opacity: 0.7;">Learning logic through blocks, robotics, and group games.</p>
+                    </div>
+                </div>
+                 <div class="journey-step reveal">
+                    <div class="journey-icon" style="background: #eef2ff;"><i class="fas fa-brain"></i></div>
+                    <div class="journey-content">
+                        <h3 style="margin-bottom: 10px;">4. Character Building</h3>
+                        <p style="opacity: 0.7;">Grounded in values, ethics, and emotional intelligence.</p>
+                    </div>
+                </div>
+                <div class="journey-step reveal">
+                    <div class="journey-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="journey-content">
+                        <h3 style="margin-bottom: 10px;">5. Future Excellence</h3>
+                        <p style="opacity: 0.7;">Academic readiness that prepares them for global success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRINCIPALS MESSAGE -->
+    <section>
+        <div class="container">
+            <div class="principal-box reveal" style="align-items: center; justify-content: center; max-width: 1000px; margin: 0 auto; background: var(--secondary-purple); padding: 80px; border-radius: 50px;">
+                <div style="flex: 1;">
+                    <img src="https://images.unsplash.com/photo-1544717297-fa154daaf762?auto=format&fit=crop&w=400&q=80" alt="Principal" style="width: 100%; border-radius: 40px; box-shadow: var(--shadow-medium);">
+                </div>
+                <div style="flex: 2;">
+                    <span class="section-tag" style="background: var(--white);">Principal’s Message</span>
+                    <h2 class="hero-title" style="font-size: 2.5rem; line-height: 1.3;">Developing the leaders of tomorrow with compassion today.</h2>
+                    <p style="font-style: italic; opacity: 0.7; margin-top: 30px; font-size: 1.1rem; border-left: 4px solid var(--accent-orange); padding-left: 25px;">"At Udaaan, we respect the pace of every child. We don't teach them what to think, but HOW to think. Welcome to our journey of discovery."</p>
+                    <div style="margin-top: 40px;">
+                        <h4 style="margin: 0; color: var(--primary-indigo);">Dr. Meena Singh</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.5;">Head of School | PhD in Child Psychology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer-placeholder"></footer>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Activities | Edukids India | Play-Based Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .activity-hero {
+            background: var(--accent-orange);
+            color: var(--white);
+            padding: 120px 5%;
+            text-align: center;
+        }
+
+        .activity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 60px; }
+        .activity-card { background: white; border-radius: 40px; overflow: hidden; box-shadow: var(--shadow-soft); transition: var(--transition); display: flex; flex-direction: column; }
+        .activity-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-medium); }
+        .activity-img { height: 300px; width: 100%; object-fit: cover; }
+        .activity-content { padding: 40px; }
+        .activity-tag { background: var(--secondary-purple); color: var(--primary-indigo); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; display: inline-block; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <header id="header-placeholder"></header>
+
+    <div class="activity-hero">
+        <h1 class="hero-title" style="color: var(--white); font-size: 4.5rem;">Where Play Becomes <br>Learning</h1>
+        <p style="opacity: 0.9; font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Extracurricular activities at Edukids are carefully curated to unlock every child's unique potential.</p>
+    </div>
+
+    <!-- MAIN ACTIVITIES -->
+    <section>
+        <div class="container">
+            <div class="text-center mb-60">
+                 <span class="section-tag" style="background: var(--secondary-purple);">Our Curriculum</span>
+                 <h2 class="hero-title" style="font-size: 3.5rem;">Beyond The Blackboard</h2>
+            </div>
+
+            <div class="activity-grid">
+                <div class="activity-card reveal">
+                    <img src="gallery.png" alt="Sports" class="activity-img">
+                    <div class="activity-content">
+                        <span class="activity-tag">Physical Development</span>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Smart Sports Academy</h3>
+                        <p style="opacity: 0.7; line-height: 1.8;">Focusing on teamwork and coordination through Football, Cricket basics, and traditional Indian games like Kabaddi (Junior version).</p>
+                    </div>
+                </div>
+                <div class="activity-card reveal">
+                    <img src="quiz_section.png" alt="Arts" class="activity-img" style="filter: hue-rotate(90deg);">
+                    <div class="activity-content">
+                        <span class="activity-tag">Creative Arts</span>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Creative Expression Lab</h3>
+                        <p style="opacity: 0.7; line-height: 1.8;">Pottery, canvas painting, and classical Indian dance forms to develop fine motor skills and cultural appreciation.</p>
+                    </div>
+                </div>
+                <!-- 2 more -->
+                <div class="activity-card reveal">
+                    <img src="hero_main.png" alt="Tech" class="activity-img" style="filter: saturate(1.5);">
+                    <div class="activity-content">
+                        <span class="activity-tag">Technology</span>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Junior Coders & STEM</h3>
+                        <p style="opacity: 0.7; line-height: 1.8;">Introduction to logic using block-based coding (Scratch Jr) and interactive LEGO robotics for early engineering.</p>
+                    </div>
+                </div>
+                <div class="activity-card reveal">
+                    <img src="girl_hero.png" alt="Yoga" class="activity-img" style="filter: sepia(0.5);">
+                    <div class="activity-content">
+                        <span class="activity-tag">Mindfulness</span>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Yoga & Inner Peace</h3>
+                        <p style="opacity: 0.7; line-height: 1.8;">Traditional Yoga asanas simplified for children to help with concentration, flexibility, and emotional balance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHT SECTION -->
+    <section style="background: var(--primary-navy); color: white; padding: 100px 5%; border-radius: 40px; margin: 0 5% 100px;">
+        <div class="container grid-2" style="gap: 60px;">
+            <div style="flex: 1.2;">
+                 <span class="section-tag" style="background: rgba(255,255,255,0.1); color: white;">Weekly Special</span>
+                 <h2 class="hero-title" style="font-size: 3rem; color: white;">Monthly Field Trips</h2>
+                 <p style="margin-top: 25px; opacity: 0.7; line-height: 1.8;">We believe the world is the classroom. Every month, students visit museums, nature parks, or science centers to connect theories with real-world experiences.</p>
+                 <a href="contact.html" class="btn btn-primary" style="margin-top: 40px; background: var(--accent-orange);"><i class="fas fa-calendar-check"></i> Book a School Tour</a>
+            </div>
+            <div style="flex: 0.8; background: rgba(255,255,255,0.05); padding: 50px; border-radius: 30px;">
+                 <h4 style="margin-bottom: 30px; border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 15px;">Upcoming Events</h4>
+                 <ul style="opacity: 0.9;">
+                    <li class="mb-20" style="display: flex; gap: 20px;"><div style="background: var(--accent-orange); padding: 10px; border-radius: 12px; font-weight: 800; min-width: 60px; text-align: center;">Apr<br>15</div> Annual Sports Meet 2024</li>
+                    <li class="mb-20" style="display: flex; gap: 20px;"><div style="background: var(--accent-orange); padding: 10px; border-radius: 12px; font-weight: 800; min-width: 60px; text-align: center;">May<br>02</div> Robotics Workshop</li>
+                    <li style="display: flex; gap: 20px;"><div style="background: var(--accent-orange); padding: 10px; border-radius: 12px; font-weight: 800; min-width: 60px; text-align: center;">Jun<br>10</div> Summer Art Fest</li>
+                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer-placeholder"></footer>
+    <script src="main.js"></script>
+</body>
+</html>

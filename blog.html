@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Blog & News | Edukids India | Parenting Wisdom</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .blog-hero {
+            background: var(--primary-navy);
+            color: var(--white);
+            padding: 120px 5%;
+            text-align: center;
+        }
+
+        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; }
+        .blog-card { background: white; border-radius: 30px; overflow: hidden; box-shadow: var(--shadow-soft); transition: var(--transition); height: 100%; display: flex; flex-direction: column; }
+        .blog-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-medium); }
+        .blog-img { height: 220px; width: 100%; object-fit: cover; }
+        .blog-content { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+        .blog-meta { font-size: 0.75rem; opacity: 0.5; margin-bottom: 15px; display: block; }
+        .blog-card h3 { font-size: 1.4rem; line-height: 1.3; margin-bottom: 15px; }
+        .blog-card p { opacity: 0.6; font-size: 0.9rem; line-height: 1.6; margin-bottom: 25px; }
+        .read-more { font-weight: 700; color: var(--primary-indigo); font-size: 0.85rem; margin-top: auto; display: inline-flex; align-items: center; gap: 10px; }
+    </style>
+</head>
+<body>
+    <header id="header-placeholder"></header>
+
+    <div class="blog-hero">
+        <h1 class="hero-title" style="color: var(--white); font-size: 4rem;">Edukids Insight</h1>
+        <p style="opacity: 0.8; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Expert parenting tips, school updates, and success stories from our vibrant Indian community.</p>
+    </div>
+
+    <!-- MAIN BLOGS -->
+    <section>
+        <div class="container">
+            <div class="text-center mb-60">
+                 <span class="section-tag" style="background: var(--secondary-purple);">Latest Updates</span>
+                 <h2 class="hero-title" style="font-size: 3.5rem;">Parenting Wisdom & News</h2>
+            </div>
+
+            <div class="blog-grid">
+                <div class="blog-card reveal">
+                    <img src="blog_post.png" alt="Math" class="blog-img">
+                    <div class="blog-content">
+                        <span class="blog-meta">Mar 20, 2024 | Parenting Tips</span>
+                        <h3>Making Math Fun for Indian Kids At Home</h3>
+                        <p>Discover how to use spices (cloves, cardamom) and grains to teach early counting and sensory math to your nursery child.</p>
+                        <a href="#" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card reveal">
+                    <img src="blog_post.png" alt="STEM" class="blog-img" style="filter: hue-rotate(45deg);">
+                    <div class="blog-content">
+                        <span class="blog-meta">Mar 15, 2024 | School News</span>
+                        <h3>Edukids Wins National "Eco-Shield" STEM Award</h3>
+                        <p>Our students designed a low-cost rainwater harvesting model for schools, winning 1st place in the Gurgaon Region Science Expo.</p>
+                        <a href="#" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- More -->
+                <div class="blog-card reveal">
+                    <img src="blog_post.png" alt="Emotional" class="blog-img" style="filter: hue-rotate(180deg);">
+                    <div class="blog-content">
+                        <span class="blog-meta">Mar 10, 2024 | Child Development</span>
+                        <h3>Decoding Emotional Intelligence for Preschoolers</h3>
+                        <p>Why EQ is more important than IQ for the success of your child in the modern competitive environment of India.</p>
+                        <a href="#" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card reveal">
+                    <img src="blog_post.png" alt="Nutrition" class="blog-img" style="filter: sepia(0.5);">
+                    <div class="blog-content">
+                        <span class="blog-meta">Mar 05, 2024 | Health</span>
+                        <h3>Healthy Tiffin Ideas: The Indian Parents Guide</h3>
+                        <p>5 quick, healthy, and kid-friendly tiffin recipes that are based on traditional Indian nutrition and modern needs.</p>
+                        <a href="#" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                 <div class="blog-card reveal">
+                    <img src="blog_post.png" alt="Activity" class="blog-img" style="filter: saturate(1.5);">
+                    <div class="blog-content">
+                        <span class="blog-meta">Mar 01, 2024 | Activities</span>
+                        <h3>Summer Art Fest: Preparing Your Child</h3>
+                        <p>Guidelines for our upcoming Summer Art Fest and how to encourage your child to express themselves through clay.</p>
+                        <a href="#" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                 <div class="blog-card reveal">
+                    <img src="blog_post.png" alt="Success" class="blog-img" style="filter: grayscale(0.5);">
+                    <div class="blog-content">
+                        <span class="blog-meta">Feb 25, 2024 | Community</span>
+                        <h3>Meet Our Teachers: Heart of Edukids</h3>
+                        <p>An interview with our Senior Child Psychologist about her 15-year journey in early childhood education.</p>
+                        <a href="#" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUBSCRIBE -->
+    <section>
+        <div class="container">
+            <div style="background: var(--accent-yellow); padding: 80px; border-radius: 40px; text-align: center;">
+                 <h2 class="hero-title" style="font-size: 3rem; margin-bottom: 20px;">Never Miss an Update</h2>
+                 <p style="margin-bottom: 40px; opacity: 0.7; font-weight: 600;">Get weekly parenting tips and school updates directly in your inbox.</p>
+                 <form style="display: flex; gap: 15px; max-width: 600px; margin: 0 auto;">
+                    <input type="email" placeholder="email@address.com" style="flex: 1; padding: 18px 25px; border-radius: 12px; border: 2px solid white; font-family: inherit;">
+                    <button class="btn btn-primary" style="background: var(--primary-navy); border-radius: 12px;">Sign Up</button>
+                 </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer-placeholder"></footer>
+    <script src="main.js"></script>
+</body>
+</html>

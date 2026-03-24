@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Edukids India | Visit Our Campus Today</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-hero {
+            background: var(--primary-navy);
+            color: var(--white);
+            padding: 120px 5%;
+            text-align: center;
+        }
+
+        .contact-info-card { background: white; padding: 40px; border-radius: 30px; border: 1px solid rgba(0,0,0,0.03); box-shadow: var(--shadow-soft); transition: var(--transition); text-align: center; height: 100%; }
+        .contact-info-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-medium); }
+        .contact-icon { width: 70px; height: 70px; background: var(--secondary-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--primary-indigo); margin: 0 auto 25px; }
+
+        .form-box { background: var(--secondary-purple); padding: 70px 60px; border-radius: 40px; box-shadow: var(--shadow-medium); }
+        .form-input { width: 100%; padding: 20px 25px; border-radius: 15px; border: 2px solid white; font-family: inherit; font-size: 1rem; margin-bottom: 25px; }
+        .form-input:focus { border-color: var(--primary-indigo); outline: none; }
+
+        /* Map Embed container */
+        .map-box { height: 500px; width: 100%; border-radius: 40px; overflow: hidden; box-shadow: var(--shadow-medium); margin: 60px 0; border: 10px solid white; }
+
+        /* FAQ Accordion */
+        .faq-item { background: white; border-radius: 20px; margin-bottom: 15px; overflow: hidden; border: 1px solid rgba(0,0,0,0.03); }
+        .faq-header { padding: 25px 35px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700; transition: var(--transition); }
+        .faq-body { padding: 0 35px; max-height: 0; transition: all 0.5s; opacity: 0; }
+        .faq-item.active .faq-body { padding: 30px 35px; max-height: 200px; opacity: 1; background: #fafafa; }
+    </style>
+</head>
+<body>
+    <header id="header-placeholder"></header>
+
+    <div class="contact-hero">
+        <h1 class="hero-title" style="color: var(--white); font-size: 4rem;">Get In Touch</h1>
+        <p style="opacity: 0.8; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Have a question? We’re here to help you make the best choice for your child’s future.</p>
+    </div>
+
+    <!-- CARDS -->
+    <section>
+        <div class="container grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+            <div class="contact-info-card">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt" style="color: #fb7185;"></i></div>
+                <h3>Visit Campus</h3>
+                <p style="opacity: 0.6; margin-top: 15px;">Sector 45, Green Valley, Gurgaon, Haryana, India - 122003</p>
+                <a href="#" style="color: var(--accent-orange); font-weight: 700; margin-top: 20px; display: inline-block;">Get Directions <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="contact-info-card">
+                <div class="contact-icon" style="background: #f0fdf4;"><i class="fas fa-phone-alt" style="color: #10b981;"></i></div>
+                <h3>Call Support</h3>
+                <p style="opacity: 0.6; margin-top: 15px;">Admission Desk: +91 98765 43210<br>General Hub: +91 124 4567 890</p>
+                <a href="tel:+919876543210" style="color: var(--accent-orange); font-weight: 700; margin-top: 20px; display: inline-block;">Call Now</a>
+            </div>
+            <div class="contact-info-card">
+                <div class="contact-icon" style="background: #eef2ff;"><i class="fas fa-envelope-open-text" style="color: #4338ca;"></i></div>
+                <h3>Email Us</h3>
+                <p style="opacity: 0.6; margin-top: 15px;">Inquiry: admissions@edukids.in<br>Support: hello@uddaanschool.in</p>
+                <a href="mailto:hello@uddaanschool.in" style="color: var(--accent-orange); font-weight: 700; margin-top: 20px; display: inline-block;">Email Support</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM & FAQ -->
+    <section>
+        <div class="container grid-2" style="gap: 80px; align-items: flex-start;">
+            <div class="form-box">
+                <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 20px;">Send a Message</h2>
+                <p style="opacity: 0.6; margin-bottom: 40px;">Our coordinators usually reply within 2 hours during school hours.</p>
+                <form id="contactForm">
+                    <input type="text" placeholder="Full Name" class="form-input" required>
+                    <input type="email" placeholder="Email Address" class="form-input" required>
+                    <input type="tel" placeholder="Mobile Number (+91)" class="form-input" required>
+                    <textarea placeholder="Tell us about your child's needs..." class="form-input" style="height: 150px;" required></textarea>
+                    <button class="btn btn-primary" style="width: 100%; height: 60px; justify-content: center; background: var(--primary-indigo);">Send Inquiry</button>
+                </form>
+            </div>
+            <div>
+                 <span class="section-tag">Quick Answers</span>
+                 <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 40px;">FAQ Overview</h2>
+                 <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-header">What are school timings? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-body"><p>Nursery & KG: 8:30 AM - 12:30 PM. <br>Primary (Class 1-5): 8:00 AM - 2:00 PM.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-header">Do you offer after-school care? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-body"><p>Yes, we have an extension program until 5:00 PM for working parents.</p></div>
+                    </div>
+                     <div class="faq-item">
+                        <div class="faq-header">Can I book a weekend tour? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-body"><p>Yes, we offer specialized school tours on Saturdays with prior appointment.</p></div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP -->
+    <section style="padding-top: 0;">
+        <div class="container">
+             <div class="map-box">
+                <!-- Replace with real Google Maps iframe if needed -->
+                <div style="width: 100%; height: 100%; background: #e5e7eb; display: flex; align-items: center; justify-content: center; color: #4b5563;">
+                    <i class="fas fa-map-marked-alt" style="font-size: 5rem; margin-right: 20px;"></i>
+                    <div>
+                        <h4 style="font-size: 1.5rem;">Interactive Map Placeholder</h4>
+                        <p>Google Maps SDK would be initialized here.</p>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <footer id="footer-placeholder"></footer>
+    <script src="main.js"></script>
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for contacting Edukids! We have received your message and will get back to you shortly.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>

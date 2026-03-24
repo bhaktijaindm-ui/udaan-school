@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics & Curriculum | Edukids India | Experiential Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .academics-hero {
+            background: linear-gradient(rgba(30, 27, 75, 0.9), rgba(67, 56, 202, 0.9)), url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 120px 5%;
+            text-align: center;
+        }
+
+        .curriculum-card { background: white; padding: 40px; border-radius: 40px; border: 1px solid rgba(0,0,0,0.03); box-shadow: var(--shadow-soft); transition: var(--transition); text-align: center; }
+        .curriculum-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-medium); }
+        .curriculum-icon { width: 80px; height: 80px; background: var(--secondary-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary-indigo); margin: 0 auto 30px; }
+    </style>
+</head>
+<body>
+    <header id="header-placeholder"></header>
+
+    <div class="academics-hero">
+        <h1 class="hero-title" style="color: var(--white); font-size: 4rem;">Beyond The Textbooks</h1>
+        <p style="opacity: 0.8; font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Our curriculum merges traditional Indian education with modern technology and hands-on workshops.</p>
+    </div>
+
+    <!-- CURRICULUM OVERVIEW -->
+    <section>
+        <div class="container">
+            <div class="text-center mb-60">
+                 <span class="section-tag">Learning Pillars</span>
+                 <h2 class="hero-title" style="font-size: 3.5rem;">How We Teach</h2>
+            </div>
+            <div class="grid-4" style="gap: 30px;">
+                <div class="curriculum-card reveal">
+                    <div class="curriculum-icon"><i class="fas fa-microscope" style="color: #38bdf8;"></i></div>
+                    <h3 class="mb-20">STEM First</h3>
+                    <p style="opacity: 0.6; font-size: 0.85rem; line-height: 1.8;">Practical science apps and robotic kits to build logic right from Nursery.</p>
+                </div>
+                <div class="curriculum-card reveal">
+                    <div class="curriculum-icon" style="background: #fdf2f8;"><i class="fas fa-palette" style="color: #fb7185;"></i></div>
+                    <h3 class="mb-20">Creative Arts</h3>
+                    <p style="opacity: 0.6; font-size: 0.85rem; line-height: 1.8;">Integrating traditional arts and digital design for the thinkers of tomorrow.</p>
+                </div>
+                <div class="curriculum-card reveal" style="background: var(--primary-navy); color: white;">
+                    <div class="curriculum-icon" style="background: rgba(255,255,255,0.1);"><i class="fas fa-language" style="color: var(--accent-yellow);"></i></div>
+                    <h3 class="mb-20" style="color: white;">Bilingualism</h3>
+                    <p style="opacity: 0.8; font-size: 0.85rem; line-height: 1.8;">Strong foundation in English and regional languages (Hindi) with focus on phonetics.</p>
+                </div>
+                <div class="curriculum-card reveal">
+                    <div class="curriculum-icon" style="background: #f0fdf4;"><i class="fas fa-heartbeat" style="color: #10b981;"></i></div>
+                    <h3 class="mb-20">EQ Over IQ</h3>
+                    <p style="opacity: 0.6; font-size: 0.85rem; line-height: 1.8;">Active workshops to build empathy, teamwork, and social responsibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPREHENSIVE STUDENT SUPPORT (THE IMPROVED SECTION) -->
+    <section style="background: #f8fafc; overflow: hidden;">
+        <div class="container grid-2" style="align-items: center; gap: 100px;">
+            <div style="padding-right: 40px;">
+                <span class="section-tag" style="background: white;">Beyond Books</span>
+                <h2 class="hero-title" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px;">Comprehensive <br>Student Support</h2>
+                <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 40px;">We provide a nurturing ecology that supports students in all aspects of their unique lives.</p>
+                
+                <!-- Support Items with better visuals -->
+                <div style="display: flex; gap: 25px; margin-bottom: 35px;" class="reveal">
+                    <div style="width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #4338ca; box-shadow: var(--shadow-soft); flex-shrink: 0;"><i class="fas fa-user-md"></i></div>
+                    <div>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 5px;">Counseling Center</h4>
+                        <p style="opacity: 0.6; line-height: 1.6;">Experienced Indian counselors to support emotional well-being and social growth through dedicated 1-on-1 sessions.</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 25px;" class="reveal">
+                    <div style="width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #f97316; box-shadow: var(--shadow-soft); flex-shrink: 0;"><i class="fas fa-terminal"></i></div>
+                    <div>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 5px;">Digital Innovation Lab</h4>
+                        <p style="opacity: 0.6; line-height: 1.6;">State-of-the-art facilities for exposure to future technologies, coding, and basic electronics for children.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="position: relative;">
+                <img src="student_support.png" alt="Student Support" style="width: 100%; border-radius: 50px; box-shadow: var(--shadow-medium);">
+                <!-- Decorative Elements -->
+                <div style="position: absolute; -top: 30px; -left: 30px; background: var(--accent-yellow); padding: 25px; border-radius: 20px; box-shadow: var(--shadow-soft);" class="floating">
+                    <i class="fas fa-shield-heart" style="font-size: 2rem; color: var(--primary-navy);"></i>
+                </div>
+                <div style="position: absolute; -bottom: 20px; -right: 20px; background: var(--accent-orange); color: white; padding: 15px 30px; border-radius: 50px; font-weight: 800; font-size: 0.8rem;">SAFE CAMPUS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section class="reveal">
+        <div class="container text-center">
+            <h2 class="hero-title" style="font-size: 3rem; margin-bottom: 50px;">Global Learning Resources</h2>
+            <div class="grid-4">
+                <img src="books.png" alt="Book" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-soft);">
+                <img src="books.png" alt="Book" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-soft); filter: hue-rotate(90deg);">
+                <img src="books.png" alt="Book" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-soft); filter: hue-rotate(180deg);">
+                <img src="books.png" alt="Book" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-soft); filter: hue-rotate(270deg);">
+            </div>
+            <div style="margin-top: 60px;">
+                <a href="#" class="btn btn-primary" style="background: var(--primary-indigo);"><i class="fas fa-download"></i> Download Full Curriculum PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer-placeholder"></footer>
+    <script src="main.js"></script>
+</body>
+</html>
