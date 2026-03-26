@@ -13,6 +13,7 @@ const headerTemplate = `
     </ul>
     <div class="nav-cta">
         <a href="https://youtube.com" target="_blank" class="btn btn-youtube">Youtube <span style="background: var(--accent-coral); color: white; padding: 2px 8px; border-radius: 50%; font-size: 0.7rem;">0</span></a>
+        <button class="menu-toggle" aria-label="Toggle Navigation"><i class="fas fa-bars"></i></button>
     </div>
 </nav>
 `;

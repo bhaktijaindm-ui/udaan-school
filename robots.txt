@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://udaaan-school.vercel.app/sitemap.xml

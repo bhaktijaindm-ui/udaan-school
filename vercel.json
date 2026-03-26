@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/$1.html" }
+  ],
+  "errorPages": [
+    { "status": 404, "page": "/404.html" }
+  ]
+}
