@@ -3,16 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admissions 2024-25 | Edukids India</title>
+    <title>Admissions 2024-25 | Udaaan School India</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .admission-hero {
-            background: var(--primary-navy);
-            color: var(--white);
-            padding: 120px 5%;
-            text-align: center;
-        }
+        /* Refactored admission-hero */
 
         /* Flowchart (Admission) */
         .process-flow { display: flex; justify-content: space-between; position: relative; margin-top: 80px; }
@@ -31,13 +26,53 @@
 <body>
     <header id="header-placeholder"></header>
 
-    <div class="admission-hero">
-        <h1 class="hero-title" style="color: var(--white); font-size: 4rem;">Enroll Your Child Today</h1>
-        <p style="opacity: 0.8; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Final batch for 2024-25 session is now open. Secure your child's seat in India's most modern primary school.</p>
+    <!-- GLOBAL FLOATING SCHOOL ELEMENTS (Aesthetic Overlay) -->
+    <style>
+        body { position: relative; } 
+        .global-floating-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 1; overflow: hidden; }
+        .container { position: relative; z-index: 10; }
+        @keyframes wander1 { 0% { transform: translate(0, 0) rotate(0deg); } 33% { transform: translate(3vw, -5vh) rotate(15deg); } 66% { transform: translate(-1.5vw, 6vh) rotate(-10deg); } 100% { transform: translate(0, 0) rotate(0deg); } }
+        .wander-a { animation: wander1 25s ease-in-out infinite; }
+        .f-char { position: absolute; font-family: 'Outfit', sans-serif; font-weight: 900; opacity: 0.15; }
+    </style>
+    <div class="global-floating-overlay">
+        <!-- Spattered fully across the height uniquely for the admissions page -->
+        <i class="fas fa-file-signature wander-a" style="position: absolute; color: var(--accent-orange); font-size: 3.5rem; opacity: 0.15; top: 8%; left: 15%;"></i>
+        <div class="f-char wander-a" style="font-size: 5.5rem; color: var(--primary-indigo); top: 18%; right: 18%;">Join</div>
+        <i class="fas fa-check-circle wander-a" style="position: absolute; color: var(--accent-mint); font-size: 4rem; opacity: 0.15; top: 32%; left: 12%;"></i>
+        <div class="f-char wander-a" style="font-size: 6rem; color: var(--secondary-purple); top: 48%; right: 25%;">2024</div>
+        <i class="fas fa-user-graduate wander-a" style="position: absolute; color: var(--accent-yellow); font-size: 3.5rem; opacity: 0.15; top: 62%; left: 8%;"></i>
+        <div class="f-char wander-a" style="font-size: 4.5rem; color: var(--accent-orange); top: 76%; right: 10%;">Apply</div>
+        <i class="fas fa-book wander-a" style="position: absolute; color: #38bdf8; font-size: 4rem; opacity: 0.15; top: 88%; left: 30%;"></i>
+        <div class="f-char wander-a" style="font-size: 5rem; color: var(--primary-navy); top: 96%; right: 40%;">Start</div>
     </div>
 
+    <!-- REDESIGNED HERO GRID (Replaces Flat Navy Block) -->
+    <section class="admission-hero" style="background: linear-gradient(135deg, #f1f5f9, #e2e8f0); padding: 80px 5% 120px 5%; position: relative; overflow: hidden;">
+        <div class="container grid-2" style="align-items: center; gap: 60px; position: relative; z-index: 2;">
+            <div style="text-align: left;">
+                <span class="section-tag" style="background: white; color: var(--primary-indigo); border: 1px solid #cbd5e1;">Admissions Open</span>
+                <h1 class="hero-title" style="color: var(--primary-navy); font-size: 4rem; line-height: 1.1; margin-top: 20px;">Enroll Your <span style="color: var(--primary-indigo);">Child</span> Today!</h1>
+                <p style="font-size: 1.2rem; margin-top: 25px; color: var(--text-muted); line-height: 1.8;">Final batch for the 2024-25 academic session is now open. Take the first step toward securing your child's seat in India's most modern primary school.</p>
+                <div style="margin-top: 40px; display: flex; gap: 20px; align-items: center;">
+                    <a href="#apply" class="btn btn-primary" style="background: var(--primary-indigo); padding: 18px 40px; border-radius: 12px; font-weight: 800; color: white;">Start Application</a>
+                    <a href="#eligibility" style="font-weight: 800; color: var(--accent-orange); text-decoration: none; padding-left: 10px;">Check Eligibility <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-images-container floating" style="position: relative; width: 100%;">
+                <img src="hero_main.png" alt="Happy Student" style="width: 100%; max-height: 480px; object-fit: cover; border-radius: 40px; box-shadow: var(--shadow-heavy); border: 15px solid white;">
+                <div class="float-stats stat-badge-1" style="bottom: -20px; left: -20px; background: white; color: var(--primary-navy);"><i class="fas fa-users" style="color: var(--accent-mint);"></i> 15:1 Student Ratio</div>
+                <div class="float-stats stat-badge-2" style="top: -20px; right: -20px; background: white; color: var(--primary-navy);"><i class="fas fa-check-circle" style="color: var(--accent-orange);"></i> Easy Transfer</div>
+            </div>
+        </div>
+        
+        <!-- Decorative Ghost Gradients (Background) -->
+        <div style="position: absolute; width: 600px; height: 600px; background: var(--primary-indigo); opacity: 0.1; border-radius: 50%; top: -150px; right: -150px; filter: blur(80px); z-index: 1;"></div>
+        <div style="position: absolute; width: 500px; height: 500px; background: var(--secondary-purple); opacity: 0.15; border-radius: 50%; bottom: -150px; left: -100px; filter: blur(80px); z-index: 1;"></div>
+    </section>
+
     <!-- ADMISSION CRITERIA -->
-    <section>
+    <section style="padding-bottom: 20px;">
         <div class="container grid-2" style="gap: 80px;">
             <div>
                 <span class="section-tag">Eligibility</span>
@@ -66,7 +101,7 @@
     </section>
 
     <!-- PROCESS FLOW -->
-    <section class="reveal" style="background: var(--bg-light);">
+    <section class="reveal" style="background: var(--bg-light); padding-top: 60px; padding-bottom: 60px;">
         <div class="container">
              <div class="text-center mb-60">
                 <span class="section-tag">Process Flow</span>
@@ -95,8 +130,6 @@
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: #10b981;"></i> No hidden admission fees</div>
                     <div style="display: flex; align-items: center; gap: 15px;"><i class="fas fa-check-circle" style="color: #10b981;"></i> Dedicated sibling discounts</div>
                 </div>
-                
-                <a href="#" class="btn btn-primary" style="background: var(--primary-navy); padding: 18px 40px; border-radius: 15px;"><i class="fas fa-download"></i> Download Fee Guide PDF</a>
             </div>
             
             <div class="form-box" style="padding: 50px 45px; border-radius: 50px; background: white; border: 1px solid #f8fafc; box-shadow: var(--shadow-medium);">
@@ -130,7 +163,7 @@
     <script>
         document.getElementById('admissionForm').addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Your request for admission at Edukids has been successfully submitted! Our coordinator will call you within 24 hours.');
+            alert('Your request for admission at Udaaan School has been successfully submitted! Our coordinator will call you within 24 hours.');
             e.target.reset();
         });
     </script>

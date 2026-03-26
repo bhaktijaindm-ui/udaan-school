@@ -3,18 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Edukids India | Nurturing Future India</title>
+    <title>About Us | Udaaan School India | Nurturing Future India</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .about-hero {
-            background: linear-gradient(rgba(30, 27, 75, 0.9), rgba(67, 56, 202, 0.9)), url('https://images.unsplash.com/photo-1523050335392-9ae8a27d009f?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
-            padding: 120px 5%;
-            text-align: center;
-        }
+        /* Refactored about-hero to use inline grid design over full backgrounds */
 
         .journey-flow { display: flex; flex-direction: column; gap: 40px; position: relative; max-width: 800px; margin: 60px auto; }
         .journey-step { display: flex; gap: 30px; align-items: center; position: relative; z-index: 2; }
@@ -34,10 +27,50 @@
 <body>
     <header id="header-placeholder"></header>
 
-    <div class="about-hero">
-        <h1 class="hero-title" style="color: var(--white); font-size: 4rem;">Nurturing India's <br>Future Leaders</h1>
-        <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">Proudly grounded in Indian values, while embracing world-class innovation.</p>
+    <!-- GLOBAL FLOATING SCHOOL ELEMENTS (Aesthetic Overlay) -->
+    <style>
+        body { position: relative; } 
+        .global-floating-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 1; overflow: hidden; }
+        .container { position: relative; z-index: 10; }
+        @keyframes wander1 { 0% { transform: translate(0, 0) rotate(0deg); } 33% { transform: translate(3vw, -5vh) rotate(15deg); } 66% { transform: translate(-1.5vw, 6vh) rotate(-10deg); } 100% { transform: translate(0, 0) rotate(0deg); } }
+        .wander-a { animation: wander1 25s ease-in-out infinite; }
+        .f-char { position: absolute; font-family: 'Outfit', sans-serif; font-weight: 900; opacity: 0.15; }
+    </style>
+    <div class="global-floating-overlay">
+        <!-- Spattered across the full height of about.html, hovering behind content -->
+        <i class="fas fa-apple-alt wander-a" style="position: absolute; color: #ef4444; font-size: 3.5rem; opacity: 0.15; top: 8%; left: 15%;"></i>
+        <div class="f-char wander-a" style="font-size: 5.5rem; color: var(--accent-orange); top: 18%; right: 18%;">B</div>
+        <i class="fas fa-shapes wander-a" style="position: absolute; color: var(--secondary-purple); font-size: 4rem; opacity: 0.15; top: 32%; left: 12%;"></i>
+        <div class="f-char wander-a" style="font-size: 6rem; color: var(--primary-indigo); top: 48%; right: 25%;">2</div>
+        <i class="fas fa-bus wander-a" style="position: absolute; color: var(--accent-orange); font-size: 3.5rem; opacity: 0.15; top: 62%; left: 8%;"></i>
+        <div class="f-char wander-a" style="font-size: 4.5rem; color: var(--accent-mint); top: 76%; right: 10%;">A</div>
+        <i class="fas fa-star wander-a" style="position: absolute; color: var(--accent-yellow); font-size: 4rem; opacity: 0.15; top: 88%; left: 30%;"></i>
+        <div class="f-char wander-a" style="font-size: 5rem; color: var(--primary-navy); top: 96%; right: 40%;">3</div>
     </div>
+
+    <!-- REDESIGNED HERO GRID (Replaces Flat Purple Block) -->
+    <section class="about-hero" style="background: linear-gradient(135deg, #f8fafc, #e0e7ff); padding: 80px 5% 120px 5%; position: relative; overflow: hidden;">
+        <div class="container grid-2" style="align-items: center; gap: 60px; position: relative; z-index: 2;">
+            <div style="text-align: left;">
+                <span class="section-tag" style="background: white; color: var(--primary-indigo);">The Udaaan Story</span>
+                <h1 class="hero-title" style="color: var(--primary-navy); font-size: 4rem; line-height: 1.1; margin-top: 20px;">Nurturing India's <br><span style="color: var(--primary-indigo);">Future Leaders</span></h1>
+                <p style="font-size: 1.2rem; margin-top: 25px; color: var(--text-muted); line-height: 1.8;">Proudly grounded in Indian values, while embracing world-class innovation. We build a foundation of lifelong curiosity and resilience for bright futures.</p>
+                <div style="margin-top: 40px; display: flex; gap: 20px; align-items: center;">
+                    <a href="#mission" class="btn btn-primary" style="background: var(--primary-indigo); padding: 18px 40px; border-radius: 12px; font-weight: 800;">Our Identity</a>
+                    <a href="#journey" style="font-weight: 800; color: var(--accent-orange); text-decoration: none; padding-left: 10px;">The Journey <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-images-container floating" style="position: relative; width: 100%;">
+                <img src="girl_hero.png" alt="Udaaan Student" style="width: 100%; max-height: 480px; object-fit: cover; border-radius: 40px; box-shadow: var(--shadow-heavy); border: 15px solid white;">
+                <div class="float-stats stat-badge-1" style="bottom: -20px; left: -20px; background: white;"><i class="fas fa-heart" style="color: #fb7185;"></i> 10+ Years Trust</div>
+                <div class="float-stats stat-badge-2" style="top: -20px; right: -20px; background: white;"><i class="fas fa-star" style="color: #fbbf24;"></i> Award Winning</div>
+            </div>
+        </div>
+        
+        <!-- Beautiful Modern Ghost Gradients (Background) -->
+        <div style="position: absolute; width: 600px; height: 600px; background: var(--accent-mint); opacity: 0.15; border-radius: 50%; top: -150px; right: -150px; filter: blur(80px); z-index: 1;"></div>
+        <div style="position: absolute; width: 500px; height: 500px; background: var(--secondary-purple); opacity: 0.15; border-radius: 50%; bottom: -150px; left: -100px; filter: blur(80px); z-index: 1;"></div>
+    </section>
 
     <!-- MISSION & VISION -->
     <section>
@@ -56,7 +89,7 @@
     </section>
 
     <!-- EXPERIENCE FLOW (ADMISSION IS NOT IN ABOUT PAGE ACCORDING TO USER'S PREVIOUS FLOW, BUT EXPERIENCE FLOW IS IN ABOUT) -->
-    <section style="background: var(--background-soft);">
+    <section style="background: #f8fafc;">
         <div class="container">
             <div class="text-center mb-60">
                 <span class="section-tag">Child Journey</span>
@@ -104,6 +137,48 @@
         </div>
     </section>
 
+    <!-- OUR CAMPUSES -->
+    <section>
+        <div class="container text-center mb-60">
+            <span class="section-tag" style="background: white; border: 1px solid #e2e8f0;">Our Locations</span>
+            <h2 class="hero-title" style="font-size: 3.5rem;">Two Vibrant Campuses</h2>
+        </div>
+        <div class="container grid-2" style="gap: 40px; margin-bottom: 40px;">
+            <div style="background: white; border-radius: 30px; padding: 40px; text-align: left; box-shadow: var(--shadow-soft);">
+                <i class="fas fa-map-marker-alt" style="font-size: 3rem; color: var(--accent-orange); margin-bottom: 20px;"></i>
+                <h3 style="font-size: 2rem; margin-bottom: 15px;">Sector 15 Campus</h3>
+                <p style="opacity: 0.7; margin-bottom: 20px; line-height: 1.6;">Our sprawling main campus featuring state-of-the-art tech labs, a massive outdoor play area, and dedicated arts wings. Perfect for holistic primary education.</p>
+                <a href="contact.html" class="btn" style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 20px; font-weight: bold; width: 100%; text-align: center; color: var(--primary-navy); display: block;">View Registration</a>
+            </div>
+            <div style="background: white; border-radius: 30px; padding: 40px; text-align: left; box-shadow: var(--shadow-soft);">
+                <i class="fas fa-map-marker-alt" style="font-size: 3rem; color: var(--accent-mint); margin-bottom: 20px;"></i>
+                <h3 style="font-size: 2rem; margin-bottom: 15px;">Sector 45 Campus</h3>
+                <p style="opacity: 0.7; margin-bottom: 20px; line-height: 1.6;">Our newest boutique campus perfectly tailored for early-years sensory development and intimate personalized learning in a highly secure environment.</p>
+                <a href="contact.html" class="btn" style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 20px; font-weight: bold; width: 100%; text-align: center; color: var(--primary-navy); display: block;">View Registration</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIRECTOR'S MESSAGE -->
+    <section style="background: #f8fafc; padding-bottom: 0;">
+        <div class="container">
+            <div class="principal-box reveal" style="align-items: center; justify-content: center; max-width: 1000px; margin: 0 auto; background: var(--primary-navy); padding: 80px; border-radius: 50px;">
+                <div style="flex: 2; padding-right: 40px; color: white;">
+                    <span class="section-tag" style="background: rgba(255,255,255,0.1); color: white;">Director's Message</span>
+                    <h2 class="hero-title" style="font-size: 2.5rem; line-height: 1.3; color: white;">Building a legacy of world-class education.</h2>
+                    <p style="font-style: italic; opacity: 0.8; margin-top: 30px; font-size: 1.1rem; border-left: 4px solid var(--accent-mint); padding-left: 25px;">"Education is not the learning of facts, but the training of the mind to think. We founded Udaaan to create an ecosystem where curiosity is celebrated and rote-learning is entirely abandoned."</p>
+                    <div style="margin-top: 40px;">
+                        <h4 style="margin: 0; font-size: 1.2rem; color: var(--accent-mint);">Mr. Rajesh Sharma</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Founder & Director</p>
+                    </div>
+                </div>
+                <div style="flex: 1;">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="Director" style="width: 100%; border-radius: 40px; box-shadow: var(--shadow-heavy); border: 10px solid rgba(255,255,255,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- PRINCIPALS MESSAGE -->
     <section>
         <div class="container">
@@ -120,6 +195,42 @@
                         <p style="font-size: 0.8rem; opacity: 0.5;">Head of School | PhD in Child Psychology</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR EDUCATORS / TEACHER MESSAGES -->
+    <section style="background: linear-gradient(to bottom, #fdfdfd, #f8fafc);">
+        <div class="container text-center mb-60">
+            <span class="section-tag" style="background: white; border: 1px solid #e2e8f0;">Our Mentors</span>
+            <h2 class="hero-title" style="font-size: 3.5rem;">Meet Our Inspiring Teachers</h2>
+        </div>
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            <!-- Teacher 1 -->
+            <div class="reveal" style="background: white; padding: 40px; border-radius: 30px; box-shadow: var(--shadow-medium); position: relative; overflow: hidden; text-align: left;">
+                <div style="position: absolute; top: 0; right: 0; background: var(--accent-orange); width: 80px; height: 80px; border-radius: 0 0 0 100%; opacity: 0.1;"></div>
+                <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=150&q=80" alt="Teacher" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 5px solid #f8fafc; margin-bottom: 20px;">
+                <h4 style="font-size: 1.4rem;">Ms. Priya Mathur</h4>
+                <p style="font-size: 0.8rem; opacity: 0.6; color: var(--primary-indigo); font-weight: 700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;">Creative Arts Lead</p>
+                <p style="font-style: italic; opacity: 0.8; font-size: 0.95rem; line-height: 1.6;">"I deeply believe in letting children splash colors outside the lines. That's exactly where true, unrestrained creativity is nurtured!"</p>
+            </div>
+            
+            <!-- Teacher 2 -->
+            <div class="reveal" style="background: white; padding: 40px; border-radius: 30px; box-shadow: var(--shadow-medium); position: relative; overflow: hidden; transform: translateY(-30px);">
+                <div style="position: absolute; top: 0; right: 0; background: var(--accent-mint); width: 80px; height: 80px; border-radius: 0 0 0 100%; opacity: 0.1;"></div>
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Teacher" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 5px solid #f8fafc; margin-bottom: 20px;">
+                <h4 style="font-size: 1.4rem;">Ms. Anjali Verma</h4>
+                <p style="font-size: 0.8rem; opacity: 0.6; color: var(--accent-mint); font-weight: 700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;">Science & Robotics</p>
+                <p style="font-style: italic; opacity: 0.8; font-size: 0.95rem; line-height: 1.6;">"Seeing the magical 'Aha!' moment in a child's eyes when their first robot finally moves is my greatest daily reward."</p>
+            </div>
+
+            <!-- Teacher 3 -->
+            <div class="reveal" style="background: white; padding: 40px; border-radius: 30px; box-shadow: var(--shadow-medium); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; right: 0; background: var(--primary-indigo); width: 80px; height: 80px; border-radius: 0 0 0 100%; opacity: 0.1;"></div>
+                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1eb4ce?auto=format&fit=crop&w=150&q=80" alt="Teacher" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 5px solid #f8fafc; margin-bottom: 20px;">
+                <h4 style="font-size: 1.4rem;">Mr. Rohan Das</h4>
+                <p style="font-size: 0.8rem; opacity: 0.6; color: var(--accent-orange); font-weight: 700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;">Athletics Director</p>
+                <p style="font-style: italic; opacity: 0.8; font-size: 0.95rem; line-height: 1.6;">"Physical fitness shapes mental resilience. We actively teach teamwork, empathy, and raw grit on the playground every day."</p>
             </div>
         </div>
     </section>

@@ -3,79 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Edukids India | Visit Our Campus Today</title>
+    <title>Contact Us | Udaaan School India | Visit Our Campus Today</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .contact-hero {
-            background: var(--primary-navy);
-            color: var(--white);
-            padding: 120px 5%;
+            background: linear-gradient(rgba(30, 27, 75, 0.85), rgba(30, 27, 75, 0.95)), url('hero_main.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 200px 5% 160px;
             text-align: center;
+            position: relative;
+            color: white;
         }
 
-        .contact-info-card { background: white; padding: 40px; border-radius: 30px; border: 1px solid rgba(0,0,0,0.03); box-shadow: var(--shadow-soft); transition: var(--transition); text-align: center; height: 100%; }
-        .contact-info-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-medium); }
-        .contact-icon { width: 70px; height: 70px; background: var(--secondary-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--primary-indigo); margin: 0 auto 25px; }
 
-        .form-box { background: var(--secondary-purple); padding: 70px 60px; border-radius: 40px; box-shadow: var(--shadow-medium); }
-        .form-input { width: 100%; padding: 20px 25px; border-radius: 15px; border: 2px solid white; font-family: inherit; font-size: 1rem; margin-bottom: 25px; }
-        .form-input:focus { border-color: var(--primary-indigo); outline: none; }
+        
+        .contact-cards-container { margin-top: -80px; position: relative; z-index: 10; margin-bottom: 10px; }
 
-        /* Map Embed container */
-        .map-box { height: 500px; width: 100%; border-radius: 40px; overflow: hidden; box-shadow: var(--shadow-medium); margin: 60px 0; border: 10px solid white; }
+        .contact-info-card { background: white; padding: 40px; border-radius: 30px; border: 1px solid rgba(0,0,0,0.03); box-shadow: var(--shadow-medium); transition: var(--transition); text-align: center; height: 100%; }
+        .contact-info-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-large); }
+        .contact-icon { width: 80px; height: 80px; background: var(--secondary-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary-indigo); margin: 0 auto 25px; }
+
+        .form-box { background: var(--primary-navy); color: white; padding: 45px 40px; border-radius: 30px; box-shadow: var(--shadow-large); position: relative; overflow: hidden; }
+        .form-box::before { content: ''; position: absolute; top: -50%; left: -50%; width: 400px; height: 400px; background: var(--primary-indigo); filter: blur(80px); opacity: 0.5; border-radius: 50%; z-index: 0; }
+        .form-input { position: relative; z-index: 1; width: 100%; padding: 16px 20px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white; font-family: inherit; font-size: 0.95rem; margin-bottom: 15px; transition: 0.3s; }
+        .form-input::placeholder { color: rgba(255,255,255,0.5); }
+        .form-input:focus { border-color: var(--accent-orange); outline: none; background: rgba(255,255,255,0.1); }
+
+
 
         /* FAQ Accordion */
-        .faq-item { background: white; border-radius: 20px; margin-bottom: 15px; overflow: hidden; border: 1px solid rgba(0,0,0,0.03); }
-        .faq-header { padding: 25px 35px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700; transition: var(--transition); }
-        .faq-body { padding: 0 35px; max-height: 0; transition: all 0.5s; opacity: 0; }
-        .faq-item.active .faq-body { padding: 30px 35px; max-height: 200px; opacity: 1; background: #fafafa; }
+        .faq-item { background: white; border-radius: 20px; margin-bottom: 20px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--shadow-soft); }
+        .faq-header { padding: 30px 40px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 1.15rem; color: var(--primary-navy); transition: var(--transition); }
+        .faq-body { padding: 0 40px; max-height: 0; transition: all 0.4s ease; opacity: 0; font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); }
+        .faq-item.active .faq-header { color: var(--accent-orange); }
+        .faq-item.active .faq-body { padding: 10px 40px 30px; max-height: 300px; opacity: 1; }
     </style>
 </head>
 <body>
     <header id="header-placeholder"></header>
 
     <div class="contact-hero">
-        <h1 class="hero-title" style="color: var(--white); font-size: 4rem;">Get In Touch</h1>
-        <p style="opacity: 0.8; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Have a question? We’re here to help you make the best choice for your child’s future.</p>
+        <div class="container" style="position: relative; z-index: 5; max-width: 800px;">
+            <span class="section-tag" style="background: rgba(255,255,255,0.1); color: var(--accent-yellow); border: 1px solid rgba(255,255,255,0.2);">Support & Admissions</span>
+            <h1 class="hero-title" style="color: white; font-size: 4.5rem; margin-top: 15px; margin-bottom: 25px;">Get In Touch</h1>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.25rem; line-height: 1.8;">Whether you're looking for admission details, campus tours, or general inquiries, our leadership team is always ready to assist you.</p>
+        </div>
     </div>
 
     <!-- CARDS -->
-    <section>
+    <section class="contact-cards-container">
         <div class="container grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
             <div class="contact-info-card">
-                <div class="contact-icon"><i class="fas fa-map-marker-alt" style="color: #fb7185;"></i></div>
-                <h3>Visit Campus</h3>
-                <p style="opacity: 0.6; margin-top: 15px;">Sector 45, Green Valley, Gurgaon, Haryana, India - 122003</p>
-                <a href="#" style="color: var(--accent-orange); font-weight: 700; margin-top: 20px; display: inline-block;">Get Directions <i class="fas fa-external-link-alt"></i></a>
+                <div class="contact-icon" style="background: rgba(251, 113, 133, 0.1);"><i class="fas fa-map-marker-alt" style="color: #fb7185;"></i></div>
+                <h3 style="color: var(--primary-navy); font-size: 1.5rem;">Visit Campus</h3>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-top: 15px;">Sector 45, Green Valley, Gurgaon, Haryana, India - 122003</p>
+                <a href="#" style="color: var(--accent-orange); font-weight: 800; margin-top: 20px; display: inline-block;">Get Directions <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
             </div>
             <div class="contact-info-card">
-                <div class="contact-icon" style="background: #f0fdf4;"><i class="fas fa-phone-alt" style="color: #10b981;"></i></div>
-                <h3>Call Support</h3>
-                <p style="opacity: 0.6; margin-top: 15px;">Admission Desk: +91 98765 43210<br>General Hub: +91 124 4567 890</p>
-                <a href="tel:+919876543210" style="color: var(--accent-orange); font-weight: 700; margin-top: 20px; display: inline-block;">Call Now</a>
+                <div class="contact-icon" style="background: rgba(16, 185, 129, 0.1);"><i class="fas fa-phone-alt" style="color: #10b981;"></i></div>
+                <h3 style="color: var(--primary-navy); font-size: 1.5rem;">Call Support</h3>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-top: 15px;">Admission Desk: +91 98765 43210<br>General Hub: +91 124 4567 890</p>
+                <a href="tel:+919876543210" style="color: #10b981; font-weight: 800; margin-top: 20px; display: inline-block;">Call Now <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
             </div>
             <div class="contact-info-card">
-                <div class="contact-icon" style="background: #eef2ff;"><i class="fas fa-envelope-open-text" style="color: #4338ca;"></i></div>
-                <h3>Email Us</h3>
-                <p style="opacity: 0.6; margin-top: 15px;">Inquiry: admissions@edukids.in<br>Support: hello@uddaanschool.in</p>
-                <a href="mailto:hello@uddaanschool.in" style="color: var(--accent-orange); font-weight: 700; margin-top: 20px; display: inline-block;">Email Support</a>
+                <div class="contact-icon" style="background: rgba(67, 56, 202, 0.1);"><i class="fas fa-envelope-open-text" style="color: #4338ca;"></i></div>
+                <h3 style="color: var(--primary-navy); font-size: 1.5rem;">Email Us</h3>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-top: 15px;">Inquiry: admissions@udaaanschool.in<br>Support: hello@udaaanschool.in</p>
+                <a href="mailto:hello@udaaanschool.in" style="color: #4338ca; font-weight: 800; margin-top: 20px; display: inline-block;">Email Support <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
             </div>
         </div>
     </section>
 
     <!-- FORM & FAQ -->
-    <section>
+    <section style="padding-top: 20px;">
         <div class="container grid-2" style="gap: 80px; align-items: flex-start;">
             <div class="form-box">
-                <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 20px;">Send a Message</h2>
-                <p style="opacity: 0.6; margin-bottom: 40px;">Our coordinators usually reply within 2 hours during school hours.</p>
-                <form id="contactForm">
+                <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 20px; color: white; position: relative; z-index: 1;">Send a Message</h2>
+                <p style="opacity: 0.8; margin-bottom: 40px; font-size: 1.05rem; line-height: 1.6; position: relative; z-index: 1;">Our coordinators physically review every inquiry and usually reply within 2 hours during active school hours.</p>
+                <form id="contactForm" style="position: relative; z-index: 1;">
                     <input type="text" placeholder="Full Name" class="form-input" required>
                     <input type="email" placeholder="Email Address" class="form-input" required>
                     <input type="tel" placeholder="Mobile Number (+91)" class="form-input" required>
-                    <textarea placeholder="Tell us about your child's needs..." class="form-input" style="height: 150px;" required></textarea>
-                    <button class="btn btn-primary" style="width: 100%; height: 60px; justify-content: center; background: var(--primary-indigo);">Send Inquiry</button>
+                    <textarea placeholder="Tell us about your child's educational needs..." class="form-input" style="height: 100px; resize: none;" required></textarea>
+                    <button class="btn btn-primary" style="width: 100%; height: 55px; justify-content: center; background: var(--accent-orange); border: none; font-size: 1.1rem; font-weight: 800; color: white; border-radius: 12px;">Send Inquiry <i class="fas fa-paper-plane" style="margin-left: 10px;"></i></button>
                 </form>
             </div>
             <div>
@@ -90,28 +103,20 @@
                         <div class="faq-header">Do you offer after-school care? <i class="fas fa-chevron-down"></i></div>
                         <div class="faq-body"><p>Yes, we have an extension program until 5:00 PM for working parents.</p></div>
                     </div>
-                     <div class="faq-item">
+                    <div class="faq-item">
                         <div class="faq-header">Can I book a weekend tour? <i class="fas fa-chevron-down"></i></div>
                         <div class="faq-body"><p>Yes, we offer specialized school tours on Saturdays with prior appointment.</p></div>
                     </div>
+                    <div class="faq-item">
+                        <div class="faq-header">What is the student-to-teacher ratio? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-body"><p>Our primary classrooms maintain a strict 15:1 ratio to ensure highly personalized attention for every child across subjects.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-header">Are meals provided on campus? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-body"><p>Yes! We have a purely organic, nutritionist-designed cafeteria providing hot, fresh meals with zero processed sugars.</p></div>
+                    </div>
                  </div>
             </div>
-        </div>
-    </section>
-
-    <!-- MAP -->
-    <section style="padding-top: 0;">
-        <div class="container">
-             <div class="map-box">
-                <!-- Replace with real Google Maps iframe if needed -->
-                <div style="width: 100%; height: 100%; background: #e5e7eb; display: flex; align-items: center; justify-content: center; color: #4b5563;">
-                    <i class="fas fa-map-marked-alt" style="font-size: 5rem; margin-right: 20px;"></i>
-                    <div>
-                        <h4 style="font-size: 1.5rem;">Interactive Map Placeholder</h4>
-                        <p>Google Maps SDK would be initialized here.</p>
-                    </div>
-                </div>
-             </div>
         </div>
     </section>
 
@@ -128,7 +133,7 @@
 
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you for contacting Edukids! We have received your message and will get back to you shortly.');
+            alert('Thank you for contacting Udaaan School! We have received your message and will get back to you shortly.');
             e.target.reset();
         });
     </script>

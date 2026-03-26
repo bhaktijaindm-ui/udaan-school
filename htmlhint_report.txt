@@ -1,0 +1,6 @@
+﻿
+   C:\Users\One Touch\UdaaanSchool Website\gallery.html
+[37m      L70 |[90m        <img src="" alt="Zoomed" class="lightbox-img" id="lightboxImg">[39m
+[37m                       ^ [31mThe attribute [ src ] of the tag [ img ] must have a value. (src-not-empty)[39m
+
+Scanned 9 files, found 1 errors in 1 files (29 ms)

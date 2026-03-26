@@ -3,16 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Activities | Edukids India | Play-Based Learning</title>
+    <title>School Activities | Udaaan School India | Play-Based Learning</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .activity-hero {
-            background: var(--accent-orange);
-            color: var(--white);
-            padding: 120px 5%;
-            text-align: center;
-        }
+        /* Refactored activity-hero */
 
         .activity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 60px; }
         .activity-card { background: white; border-radius: 40px; overflow: hidden; box-shadow: var(--shadow-soft); transition: var(--transition); display: flex; flex-direction: column; }
@@ -25,10 +20,50 @@
 <body>
     <header id="header-placeholder"></header>
 
-    <div class="activity-hero">
-        <h1 class="hero-title" style="color: var(--white); font-size: 4.5rem;">Where Play Becomes <br>Learning</h1>
-        <p style="opacity: 0.9; font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Extracurricular activities at Edukids are carefully curated to unlock every child's unique potential.</p>
+    <!-- GLOBAL FLOATING SCHOOL ELEMENTS (Aesthetic Overlay) -->
+    <style>
+        body { position: relative; } 
+        .global-floating-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 1; overflow: hidden; }
+        .container { position: relative; z-index: 10; }
+        @keyframes wander1 { 0% { transform: translate(0, 0) rotate(0deg); } 33% { transform: translate(3vw, -5vh) rotate(15deg); } 66% { transform: translate(-1.5vw, 6vh) rotate(-10deg); } 100% { transform: translate(0, 0) rotate(0deg); } }
+        .wander-a { animation: wander1 25s ease-in-out infinite; }
+        .f-char { position: absolute; font-family: 'Outfit', sans-serif; font-weight: 900; opacity: 0.15; }
+    </style>
+    <div class="global-floating-overlay">
+        <!-- Spattered across the full height uniquely for the activities page -->
+        <i class="fas fa-palette wander-a" style="position: absolute; color: var(--accent-orange); font-size: 3.5rem; opacity: 0.15; top: 8%; left: 15%;"></i>
+        <div class="f-char wander-a" style="font-size: 5.5rem; color: var(--primary-indigo); top: 18%; right: 18%;">Arts</div>
+        <i class="fas fa-futbol wander-a" style="position: absolute; color: var(--accent-mint); font-size: 4rem; opacity: 0.15; top: 32%; left: 12%;"></i>
+        <div class="f-char wander-a" style="font-size: 6rem; color: var(--secondary-purple); top: 48%; right: 25%;">Play</div>
+        <i class="fas fa-theater-masks wander-a" style="position: absolute; color: var(--accent-yellow); font-size: 3.5rem; opacity: 0.15; top: 62%; left: 8%;"></i>
+        <i class="fas fa-paper-plane wander-a" style="position: absolute; color: var(--accent-orange); font-size: 4.5rem; opacity: 0.15; top: 76%; right: 10%;"></i>
+        <i class="fas fa-robot wander-a" style="position: absolute; color: #38bdf8; font-size: 4rem; opacity: 0.15; top: 88%; left: 30%;"></i>
+        <div class="f-char wander-a" style="font-size: 5rem; color: var(--primary-navy); top: 96%; right: 40%;">Sport</div>
     </div>
+
+    <!-- REDESIGNED HERO GRID (Replaces Flat Orange Block) -->
+    <section class="activity-hero" style="background: linear-gradient(135deg, #fffbeb, #ffedd5); padding: 80px 5% 120px 5%; position: relative; overflow: hidden;">
+        <div class="container grid-2" style="align-items: center; gap: 60px; position: relative; z-index: 2;">
+            <div style="text-align: left;">
+                <span class="section-tag" style="background: white; color: var(--accent-orange); border: 1px solid #fed7aa;">Extracurriculars</span>
+                <h1 class="hero-title" style="color: var(--primary-navy); font-size: 4rem; line-height: 1.1; margin-top: 20px;">Where <span style="color: var(--accent-orange);">Play</span> Becomes <br>Learning!</h1>
+                <p style="font-size: 1.2rem; margin-top: 25px; color: var(--text-muted); line-height: 1.8;">Activities at Udaaan are carefully curated to unlock your child's unique potential, balancing physical vigor with creative thinking.</p>
+                <div style="margin-top: 40px; display: flex; gap: 20px; align-items: center;">
+                    <a href="#curriculum" class="btn btn-primary" style="background: var(--accent-orange); padding: 18px 40px; border-radius: 12px; font-weight: 800; color: white;">Explore Clubs</a>
+                    <a href="#schedule" style="font-weight: 800; color: var(--primary-indigo); text-decoration: none; padding-left: 10px;">View Calendar <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-images-container floating" style="position: relative; width: 100%;">
+                <img src="gallery.png" alt="Students Playing" style="width: 100%; max-height: 480px; object-fit: cover; border-radius: 40px; box-shadow: var(--shadow-heavy); border: 15px solid white;">
+                <div class="float-stats stat-badge-1" style="bottom: -20px; left: -20px; background: white; color: var(--primary-navy);"><i class="fas fa-futbol" style="color: var(--accent-mint);"></i> 15+ Active Sports</div>
+                <div class="float-stats stat-badge-2" style="top: -20px; right: -20px; background: white; color: var(--primary-navy);"><i class="fas fa-paint-brush" style="color: var(--accent-yellow);"></i> Tech & Art Labs</div>
+            </div>
+        </div>
+        
+        <!-- Decorative Ghost Gradients (Background) -->
+        <div style="position: absolute; width: 600px; height: 600px; background: var(--accent-orange); opacity: 0.1; border-radius: 50%; top: -150px; right: -150px; filter: blur(80px); z-index: 1;"></div>
+        <div style="position: absolute; width: 500px; height: 500px; background: var(--accent-yellow); opacity: 0.15; border-radius: 50%; bottom: -150px; left: -100px; filter: blur(80px); z-index: 1;"></div>
+    </section>
 
     <!-- MAIN ACTIVITIES -->
     <section>
@@ -77,7 +112,7 @@
     </section>
 
     <!-- HIGHLIGHT SECTION -->
-    <section style="background: var(--primary-navy); color: white; padding: 100px 5%; border-radius: 40px; margin: 0 5% 100px;">
+    <section style="background: var(--primary-navy); color: white; padding: 60px 5%; border-radius: 40px; margin: 0 5% 100px; position: relative; z-index: 5;">
         <div class="container grid-2" style="gap: 60px;">
             <div style="flex: 1.2;">
                  <span class="section-tag" style="background: rgba(255,255,255,0.1); color: white;">Weekly Special</span>

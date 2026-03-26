@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edukids | The Future of Indian Primary Education</title>
-    <meta name="description" content="Edukids is a premium primary school in Gurgaon offering activity-based learning, STEM curriculum, and holistic child development in a secure campus.">
+    <title>Udaaan School | The Future of Indian Primary Education</title>
+    <meta name="description" content="Udaaan School is a premium primary school in Gurgaon offering activity-based learning, STEM curriculum, and holistic child development in a secure campus.">
     <meta name="keywords" content="primary school gurgaon, kids education, STEM school, preschool gurgaon, udaaan school">
-    <meta name="author" content="Edukids School">
+    <meta name="author" content="Udaaan School School">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://udaaan-school.vercel.app/">
-    <meta property="og:title" content="Edukids | The Future of Indian Primary Education">
+    <meta property="og:title" content="Udaaan School | The Future of Indian Primary Education">
     <meta property="og:description" content="Leading the way in experiential primary education across India. Let the child be the director, and the actor in his own play.">
     <meta property="og:image" content="hero_main.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Edukids | The Future of Indian Primary Education">
+    <meta property="twitter:title" content="Udaaan School | The Future of Indian Primary Education">
     <meta property="twitter:description" content="Leading the way in experiential primary education across India.">
     <meta property="twitter:image" content="hero_main.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Specific Hero styles matching Edukids screenshot */
+        /* Specific Hero styles matching Udaaan School screenshot */
         .hero-images-container { position: relative; width: 500px; height: 500px; margin: 0 auto; }
         .circle-hero-1 { width: 320px; height: 320px; border-radius: 50%; border: 8px solid white; box-shadow: 0 30px 60px rgba(0,0,0,0.1); position: absolute; top: 0; left: 0; z-index: 2; object-fit: cover; }
         .circle-hero-2 { width: 380px; height: 380px; border-radius: 50%; border: 8px solid var(--accent-yellow); box-shadow: 0 30px 60px rgba(0,0,0,0.1); position: absolute; bottom: 0; right: 0; z-index: 1; object-fit: cover; }
@@ -49,6 +49,93 @@
     </style>
 </head>
 <body>
+
+    <!-- Navigation Placeholder -->
+    <div id="nav-placeholder"></div>
+    
+    <!-- GLOBAL FLOATING SCHOOL ELEMENTS (Aesthetic Overlay) -->
+    <style>
+        body { position: relative; } /* Crucial so absolute overlay binds to document height */
+        .global-floating-overlay {
+            position: absolute; /* Scrolls with the page instead of staying fixed! */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 1; /* Pushed in front of section backgrounds */
+            overflow: hidden;
+        }
+        /* Lock all main content containers structurally ABOVE the floating overlay */
+        .container {
+            position: relative;
+            z-index: 10;
+        }
+        @keyframes wander1 {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(3vw, -5vh) rotate(15deg); }
+            66% { transform: translate(-1.5vw, 6vh) rotate(-10deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+        @keyframes wander2 {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(-3vw, 5vh) rotate(-20deg); }
+            66% { transform: translate(2vw, -5vh) rotate(15deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+        @keyframes wander3 {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(2vw, 6vh) rotate(10deg); }
+            66% { transform: translate(-2vw, -8vh) rotate(-15deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+        .wander-a { animation: wander1 22s ease-in-out infinite; }
+        .wander-b { animation: wander2 26s ease-in-out infinite; }
+        .wander-c { animation: wander3 30s ease-in-out infinite; }
+        .f-char {
+            position: absolute;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+        }
+    </style>
+    <div class="global-floating-overlay">
+        <!-- Spreading unique items FULLY across horizontal space (center/sides), safely sitting behind content -->
+        
+        <!-- Hero area (0 - 15%) -->
+        <div class="f-char wander-a" style="font-size: 5rem; color: var(--primary-indigo); opacity: 0.15; top: 3%; left: 18%;">A</div>
+        <i class="fas fa-rocket wander-b" style="position: absolute; color: var(--accent-orange); font-size: 3rem; opacity: 0.2; top: 6%; right: 30%;"></i>
+        <div class="f-char wander-c" style="font-size: 4.5rem; color: var(--accent-mint); opacity: 0.15; top: 12%; left: 60%;">1</div>
+        <i class="fas fa-apple-alt wander-a" style="position: absolute; color: #ef4444; font-size: 3.5rem; opacity: 0.15; top: 14%; left: 35%;"></i>
+        
+        <!-- About/Programs area (15 - 30%) -->
+        <div class="f-char wander-b" style="font-size: 5rem; color: var(--accent-orange); opacity: 0.15; top: 20%; right: 45%;">B</div>
+        <i class="fas fa-palette wander-a" style="position: absolute; color: var(--accent-yellow); font-size: 4rem; opacity: 0.15; top: 24%; left: 22%;"></i>
+        <div class="f-char wander-c" style="font-size: 4.5rem; color: var(--primary-navy); opacity: 0.15; top: 28%; right: 15%;">2</div>
+        <i class="fas fa-shapes wander-b" style="position: absolute; color: var(--secondary-purple); font-size: 3rem; opacity: 0.15; top: 32%; left: 55%;"></i>
+
+        <!-- Activities area (30 - 45%) -->
+        <div class="f-char wander-a" style="font-size: 5.5rem; color: var(--secondary-purple); opacity: 0.15; top: 38%; right: 25%;">C</div>
+        <i class="fas fa-music wander-b" style="position: absolute; color: var(--secondary-purple); font-size: 3.5rem; opacity: 0.18; top: 42%; left: 40%;"></i>
+        <div class="f-char wander-c" style="font-size: 4.5rem; color: var(--accent-yellow); opacity: 0.15; top: 47%; right: 45%;">3</div>
+        <i class="fas fa-bus wander-a" style="position: absolute; color: var(--accent-orange); font-size: 3rem; opacity: 0.15; top: 52%; left: 20%;"></i>
+
+        <!-- Testimonials/Admissions (45 - 65%) -->
+        <i class="fas fa-book-open wander-a" style="position: absolute; color: var(--primary-navy); font-size: 3.5rem; opacity: 0.15; top: 58%; left: 50%;"></i>
+        <div class="f-char wander-b" style="font-size: 5.5rem; color: var(--accent-mint); opacity: 0.15; top: 62%; right: 35%;">D</div>
+        <div class="f-char wander-c" style="font-size: 4.5rem; color: var(--accent-orange); opacity: 0.15; top: 68%; left: 30%;">4</div>
+        <i class="fas fa-graduation-cap wander-b" style="position: absolute; color: var(--primary-indigo); font-size: 4rem; opacity: 0.15; top: 72%; right: 15%;"></i>
+
+        <!-- FAQ (65 - 85%) -->
+        <i class="fas fa-flask wander-b" style="position: absolute; color: var(--secondary-purple); font-size: 3.5rem; opacity: 0.15; top: 77%; left: 65%;"></i>
+        <div class="f-char wander-a" style="font-size: 5rem; color: var(--primary-indigo); opacity: 0.15; top: 82%; right: 40%;">E</div>
+        <i class="fas fa-star wander-c" style="position: absolute; color: var(--accent-yellow); font-size: 3.5rem; opacity: 0.15; top: 87%; left: 25%;"></i>
+        <i class="fas fa-microscope wander-a" style="position: absolute; color: var(--accent-mint); font-size: 3.5rem; opacity: 0.15; top: 89%; right: 20%;"></i>
+
+        <!-- Contact / Bottom (85 - 100%) -->
+        <div class="f-char wander-b" style="font-size: 4.5rem; color: var(--primary-navy); opacity: 0.15; top: 93%; left: 45%;">5</div>
+        <i class="fas fa-globe wander-a" style="position: absolute; color: var(--accent-mint); font-size: 3.5rem; opacity: 0.15; top: 96%; right: 30%;"></i>
+        <i class="fas fa-pencil-alt wander-c" style="position: absolute; color: var(--accent-orange); font-size: 3rem; opacity: 0.15; top: 98%; left: 15%;"></i>
+    </div>
 
     <header id="header-placeholder"></header>
 
@@ -87,7 +174,9 @@
         </section>
 
         <!-- 2. ABOUT US PREVIEW -->
-        <section class="reveal">
+        <section class="reveal" style="padding-bottom: 60px; position: relative;">
+            <!-- Custom floating element for this empty zone -->
+            <i class="fas fa-paper-plane wander-c" style="position: absolute; color: var(--accent-orange); font-size: 3.5rem; opacity: 0.2; bottom: -30px; right: 12%; z-index: 1;"></i>
             <div class="container grid-2" style="align-items: center;">
                 <div style="position: relative; display: flex; justify-content: center;">
                     <img src="boy_skateboard.png" alt="About" style="width: 480px; height: 480px; border-radius: 50%; object-fit: cover; border: 15px solid white; box-shadow: var(--shadow-medium);">
@@ -95,7 +184,7 @@
                     <i class="fas fa-heart doodle" style="bottom: 10%; right: -20px; color: #fb7185; font-size: 2.5rem; opacity: 1;"></i>
                 </div>
                 <div style="padding-left: 60px;">
-                    <span class="section-tag">About Edukids</span>
+                    <span class="section-tag">About Udaaan School</span>
                     <h2 class="hero-title" style="font-size: 3.5rem; line-height: 1.1;">Traditional Classes <br>Simplified For Play</h2>
                     <p style="margin-top: 30px; font-size: 1.1rem; color: var(--text-muted); line-height: 1.8;">We believe the child should be the actor in their own play. Our campus is designed to encourage Peer engagement and long-term focus through curiosity, not pressure.</p>
                     <ul class="mt-40">
@@ -109,7 +198,7 @@
         </section>
 
         <!-- 3. ADMISSION PROCESS FLOWCHART -->
-        <section style="background: #f8fafc;">
+        <section style="background: #f8fafc; padding-top: 60px;">
             <div class="container">
                 <div class="text-center mb-60">
                     <span class="section-tag" style="background: white;">Step-by-Step</span>
@@ -135,46 +224,295 @@
                     <div><span class="section-tag">Visual Journey</span><h2 class="hero-title" style="font-size: 3.2rem; margin: 0;">Life at Campus</h2></div>
                     <a href="gallery.html" class="btn btn-primary" style="background: var(--primary-indigo); border-radius: 12px;">Explore Full Gallery</a>
                 </div>
-                <div class="grid-2" style="gap: 30px;">
-                    <img src="gallery.png" alt="Gallery" style="width: 100%; border-radius: 40px; box-shadow: var(--shadow-medium);">
-                    <img src="gallery.png" alt="Gallery" style="width: 100%; border-radius: 40px; box-shadow: var(--shadow-medium); filter: saturate(1.1) brightness(1.05);">
+                <style>
+                    .carousel-container {
+                        width: 100%;
+                        position: relative;
+                        padding: 10px 0;
+                    }
+                    /* Fading gradient edges for a slick look */
+                    .carousel-container::before, .carousel-container::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        width: 15%;
+                        height: 100%;
+                        z-index: 2;
+                        pointer-events: none;
+                    }
+                    .carousel-container::before {
+                        left: 0;
+                        background: linear-gradient(to right, var(--bg-light), rgba(255,255,255,0));
+                    }
+                    .carousel-container::after {
+                        right: 0;
+                        background: linear-gradient(to left, var(--bg-light), rgba(255,255,255,0));
+                    }
+                    .carousel-track {
+                        display: flex;
+                        gap: 30px;
+                        overflow-x: auto;
+                        scroll-behavior: smooth;
+                        scrollbar-width: none; /* Firefox */
+                        -ms-overflow-style: none; /* IE/Edge */
+                        padding: 20px;
+                        scroll-snap-type: x mandatory;
+                    }
+                    .carousel-track::-webkit-scrollbar {
+                        display: none; /* Safari/Chrome */
+                    }
+                    .carousel-card {
+                        width: 450px;
+                        height: 320px;
+                        border-radius: 40px;
+                        overflow: hidden;
+                        box-shadow: var(--shadow-medium);
+                        flex-shrink: 0;
+                        position: relative;
+                        cursor: pointer;
+                        scroll-snap-align: center;
+                    }
+                    .carousel-card img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                    }
+                    .carousel-card:hover img {
+                        transform: scale(1.1);
+                    }
+                    .carousel-arrow {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 60px;
+                        height: 60px;
+                        background: var(--white);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        box-shadow: var(--shadow-medium);
+                        z-index: 10;
+                        border: none;
+                        color: var(--primary-indigo);
+                        font-size: 1.5rem;
+                        transition: var(--transition);
+                    }
+                    .carousel-arrow:hover {
+                        background: var(--primary-indigo);
+                        color: white;
+                        transform: translateY(-50%) scale(1.1);
+                    }
+                    .arrow-left { left: 10px; }
+                    .arrow-right { right: 10px; }
+
+                    @media (max-width: 768px) {
+                        .carousel-card { width: 300px; height: 220px; }
+                        .arrow-left { left: 0px; }
+                        .arrow-right { right: 0px; }
+                        .carousel-arrow { width: 45px; height: 45px; font-size: 1rem; }
+                    }
+                </style>
+                <div class="carousel-container" id="campusCarousel">
+                    <button class="carousel-arrow arrow-left" id="btnLeft" aria-label="Previous image"><i class="fas fa-arrow-left"></i></button>
+                    <button class="carousel-arrow arrow-right" id="btnRight" aria-label="Next image"><i class="fas fa-arrow-right"></i></button>
+                    <div class="carousel-track" id="scrollTrack">
+                        <!-- Set -->
+                        <div class="carousel-card"><img src="gallery.png" alt="Campus Life"></div>
+                        <div class="carousel-card"><img src="girl_hero.png" alt="Happy Student" style="filter: saturate(1.1) brightness(1.05);"></div>
+                        <div class="carousel-card"><img src="quiz_section.png" alt="Learning" style="filter: hue-rotate(5deg);"></div>
+                        <div class="carousel-card"><img src="boy_skateboard.png" alt="Activity" style="filter: saturate(1.2);"></div>
+                        <div class="carousel-card"><img src="gallery.png" alt="Campus Life" style="filter: hue-rotate(-10deg);"></div>
+                        <div class="carousel-card"><img src="books.png" alt="Library" style="filter: saturate(1.1) brightness(1.05);"></div>
+                        <div class="carousel-card"><img src="quiz_section.png" alt="Learning" style="filter: hue-rotate(5deg);"></div>
+                    </div>
                 </div>
+                
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const track = document.getElementById('scrollTrack');
+                        const btnLeft = document.getElementById('btnLeft');
+                        const btnRight = document.getElementById('btnRight');
+                        
+                        // Card width + gap
+                        const scrollAmount = window.innerWidth <= 768 ? 330 : 480; 
+
+                        btnLeft.addEventListener('click', () => {
+                            track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                        });
+                        
+                        btnRight.addEventListener('click', () => {
+                            // Reset to start organically if reached end
+                            if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
+                                track.scrollTo({ left: 0, behavior: 'smooth' });
+                            } else {
+                                track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                            }
+                        });
+
+                        // Modern auto-scroll wrapper (3 seconds for faster feedback)
+                        let autoScrollTimer = setInterval(() => {
+                            btnRight.click();
+                        }, 3000);
+
+                        function pauseScroll() {
+                            clearInterval(autoScrollTimer);
+                        }
+
+                        function resumeScroll() {
+                            clearInterval(autoScrollTimer); // clear any existing
+                            autoScrollTimer = setInterval(() => { btnRight.click(); }, 3000);
+                        }
+
+                        // Only pause when hovering EXACTLY over a card or an arrow, not empty space
+                        document.querySelectorAll('.carousel-card').forEach(card => {
+                            card.addEventListener('mouseenter', pauseScroll);
+                            card.addEventListener('mouseleave', resumeScroll);
+                        });
+                        
+                        btnLeft.addEventListener('mouseenter', pauseScroll);
+                        btnLeft.addEventListener('mouseleave', resumeScroll);
+                        btnRight.addEventListener('mouseenter', pauseScroll);
+                        btnRight.addEventListener('mouseleave', resumeScroll);
+                    });
+                </script>
             </div>
         </section>
 
         <!-- 5. ACTIVITY (QUIZ) -->
         <section style="padding: 0 5%;" class="reveal">
-            <div class="container quiz-box">
-                <div class="bg-orange" style="display: flex; align-items: center; justify-content: center; padding: 50px;">
-                    <img src="quiz_section.png" alt="Quiz" style="width: 100%; border-radius: 40px; box-shadow: var(--shadow-medium);">
+            <style>
+                .quiz-banner {
+                    background: linear-gradient(135deg, var(--primary-navy) 0%, #312e81 100%);
+                    border-radius: 40px;
+                    overflow: hidden;
+                    display: grid;
+                    grid-template-columns: 1.1fr 0.9fr;
+                    align-items: center;
+                    box-shadow: 0 20px 50px rgba(30, 27, 75, 0.15);
+                    position: relative;
+                    min-height: 380px; 
+                }
+                .quiz-banner-content {
+                    padding: 50px 60px;
+                    position: relative;
+                    z-index: 2;
+                }
+                .quiz-banner-img-wrapper {
+                    height: 100%;
+                    width: 100%;
+                    position: relative;
+                    overflow: hidden;
+                }
+                .quiz-banner-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: left center;
+                    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                }
+                .quiz-banner:hover .quiz-banner-img {
+                    transform: scale(1.05); /* Engaging image zoom on hover */
+                }
+                .quiz-gradient-mask {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 150px;
+                    background: linear-gradient(to right, #312e81, transparent);
+                    z-index: 1;
+                }
+                /* Engaging button */
+                .btn-quiz {
+                    background: white;
+                    color: var(--primary-navy);
+                    padding: 16px 35px;
+                    border-radius: 50px;
+                    font-weight: 800;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 12px;
+                    transition: all 0.3s;
+                    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+                    text-decoration: none;
+                    margin-top: 15px;
+                }
+                .btn-quiz:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 15px 35px rgba(249, 115, 22, 0.3);
+                    background: var(--accent-orange);
+                    color: white;
+                }
+                .btn-quiz i {
+                    color: var(--accent-orange);
+                    transition: color 0.3s;
+                }
+                .btn-quiz:hover i {
+                    color: white;
+                }
+                
+                @media (max-width: 992px) {
+                    .quiz-banner {
+                        grid-template-columns: 1fr;
+                        min-height: auto;
+                    }
+                    .quiz-banner-content {
+                        padding: 40px 30px;
+                    }
+                    .quiz-banner-img-wrapper {
+                        height: 300px;
+                    }
+                    .quiz-gradient-mask {
+                        width: 100%;
+                        height: 100px;
+                        background: linear-gradient(to bottom, #312e81, transparent);
+                    }
+                }
+            </style>
+            <div class="container quiz-banner">
+                <div class="quiz-banner-content">
+                    <span style="background: rgba(255,255,255,0.1); color: var(--accent-yellow); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; padding: 8px 18px; font-size: 0.8rem; font-weight: 800; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 25px;">
+                        <i class="fas fa-gamepad"></i> Play-to-Learn Core
+                    </span>
+                    <h2 style="font-size: 3rem; color: white; line-height: 1.1; margin-bottom: 15px; font-weight: 800;">
+                        Interactive <span style="color: var(--accent-orange);">Quiz Games</span>
+                    </h2>
+                    <p style="opacity: 0.85; color: white; font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px; max-width: 450px;">
+                        We gamify every assessment. Your child won't feel like they're being tested, they'll feel like they're winning!
+                    </p>
+                    <a href="activities.html" class="btn-quiz">
+                        Explore Game Library <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="bg-navy" style="padding: 100px 80px; display: flex; flex-direction: column; justify-content: center;">
-                    <span class="section-tag" style="background: rgba(255,255,255,0.1); color: white;">Play-to-Learn</span>
-                    <h2 style="font-size: 3.5rem; color: white; line-height: 1.1; margin-bottom: 30px;">Online Quiz Games</h2>
-                    <p style="opacity: 0.8; color: white; font-size: 1.2rem; line-height: 1.8;">We gamify every assessment. Your child won't feel like they're being tested, they'll feel like they're winning!</p>
-                    <a href="activities.html" class="btn" style="background: white; color: var(--primary-navy); margin-top: 40px; max-width: 250px; justify-content: center;">Game Library</a>
+
+                <div class="quiz-banner-img-wrapper">
+                    <div class="quiz-gradient-mask"></div>
+                    <img src="quiz_section.png" alt="Quiz Games" class="quiz-banner-img">
                 </div>
             </div>
         </section>
 
-        <!-- TESTIMONIALS (SUPERSTARS) -->
-        <section class="reveal">
+        <!-- ACADEMIC HIGHLIGHTS -->
+        <section class="reveal" style="padding: 50px 0;">
             <div class="container">
-                 <div class="text-center mb-60">
-                    <span class="section-tag">Superstars</span>
-                    <h2 class="hero-title" style="font-size: 3.2rem;">Month's Highlight</h2>
+                 <div class="text-center mb-40">
+                    <span class="section-tag">Academic Excellence</span>
+                    <h2 class="hero-title" style="font-size: 3.2rem;">Academic Highlights</h2>
                 </div>
-                <div class="grid-4" style="gap: 50px;">
-                    <div style="text-align: center;"><img src="student_1.png" alt="Kid" style="width: 180px; height: 180px; border-radius: 50%; border: 6px solid var(--secondary-purple); box-shadow: var(--shadow-soft); margin-bottom: 25px;"><h3>Ananya Roy</h3><p style="opacity: 0.6; font-size: 0.9rem;">Grade 3 Star Learner</p></div>
-                    <div style="text-align: center;"><img src="student_2.png" alt="Kid" style="width: 180px; height: 180px; border-radius: 50%; border: 6px solid #f0fff4; box-shadow: var(--shadow-soft); margin-bottom: 25px;"><h3>Aarav Sing</h3><p style="opacity: 0.6; font-size: 0.9rem;">Chess Junior Champion</p></div>
-                    <div style="text-align: center;"><img src="student_1.png" alt="Kid" style="width: 180px; height: 180px; border-radius: 50%; border: 6px solid #fff5f2; filter: hue-rotate(90deg); box-shadow: var(--shadow-soft); margin-bottom: 25px;"><h3>Isha Patel</h3><p style="opacity: 0.6; font-size: 0.9rem;">Artist of the Month</p></div>
-                    <div style="text-align: center;"><img src="student_2.png" alt="Kid" style="width: 180px; height: 180px; border-radius: 50%; border: 6px solid #eef2ff; filter: saturate(1.2); box-shadow: var(--shadow-soft); margin-bottom: 25px;"><h3>Vihaan Sharma</h3><p style="opacity: 0.6; font-size: 0.9rem;">STEM Lego Lead</p></div>
+                <div class="grid-4" style="gap: 30px;">
+                    <div style="text-align: center;"><img src="student_1.png" alt="Kid" style="width: 160px; height: 160px; border-radius: 50%; border: 6px solid var(--secondary-purple); box-shadow: var(--shadow-soft); margin-bottom: 15px;"><h3>Ananya Roy</h3><p style="opacity: 0.6; font-size: 0.9rem;">Grade 3 Star Learner</p></div>
+                    <div style="text-align: center;"><img src="student_2.png" alt="Kid" style="width: 160px; height: 160px; border-radius: 50%; border: 6px solid #f0fff4; box-shadow: var(--shadow-soft); margin-bottom: 15px;"><h3>Aarav Sing</h3><p style="opacity: 0.6; font-size: 0.9rem;">Chess Junior Champion</p></div>
+                    <div style="text-align: center;"><img src="student_1.png" alt="Kid" style="width: 160px; height: 160px; border-radius: 50%; border: 6px solid #fff5f2; filter: hue-rotate(90deg); box-shadow: var(--shadow-soft); margin-bottom: 15px;"><h3>Isha Patel</h3><p style="opacity: 0.6; font-size: 0.9rem;">Artist of the Month</p></div>
+                    <div style="text-align: center;"><img src="student_2.png" alt="Kid" style="width: 160px; height: 160px; border-radius: 50%; border: 6px solid #eef2ff; filter: saturate(1.2); box-shadow: var(--shadow-soft); margin-bottom: 15px;"><h3>Vihaan Sharma</h3><p style="opacity: 0.6; font-size: 0.9rem;">STEM Lego Lead</p></div>
                 </div>
             </div>
         </section>
 
         <!-- TESTIMONIALS (PARENT TRUST) -->
-        <section style="background: white;">
+        <section style="background: white; padding-bottom: 50px;">
             <div class="container">
                 <div class="text-center mb-60">
                     <span class="section-tag">Parent Trust</span>
@@ -200,7 +538,7 @@
         </section>
 
         <!-- 7. BLOGS PREVIEW -->
-        <section class="reveal">
+        <section class="reveal" style="padding-top: 50px; padding-bottom: 50px;">
             <div class="container">
                 <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 60px;">
                     <div><span class="section-tag">Knowledge Hub</span><h2 class="hero-title" style="font-size: 3.2rem; margin: 0;">Parenting Tips</h2></div>
@@ -228,31 +566,165 @@
         </section>
 
         <!-- 8. FAQ SECTION -->
-        <section id="faq" class="reveal" style="background: #fdfdfd;">
-            <div class="container">
-                 <div class="text-center mb-60">
-                    <span class="section-tag">Quick Help</span>
-                    <h2 class="hero-title" style="font-size: 3.2rem;">FAQs Overview</h2>
+        <section id="faq" class="reveal" style="background: linear-gradient(to bottom, #fdfdfd, #f8fafc); padding-bottom: 50px;">
+            <style>
+                .faq-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1.5fr;
+                    gap: 60px;
+                    align-items: flex-start;
+                }
+                .faq-leftbox {
+                    position: sticky;
+                    top: 120px;
+                }
+                .premium-faq-item {
+                    background: var(--white);
+                    border-radius: 20px;
+                    margin-bottom: 20px;
+                    border: 1px solid rgba(0,0,0,0.04);
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+                    transition: var(--transition);
+                    overflow: hidden;
+                }
+                .premium-faq-item:hover {
+                    box-shadow: 0 15px 40px rgba(67, 56, 202, 0.08);
+                    transform: translateX(5px);
+                    border-color: rgba(67, 56, 202, 0.2);
+                }
+                .premium-faq-header {
+                    padding: 25px 35px;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                    color: var(--primary-navy);
+                }
+                .icon-box {
+                    width: 35px;
+                    height: 35px;
+                    background: #f0fdf4;
+                    color: #10b981;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.4s ease;
+                }
+                .premium-faq-item.active .icon-box {
+                    background: var(--accent-orange);
+                    color: white;
+                    transform: rotate(45deg);
+                }
+                .premium-faq-body {
+                    padding: 0 35px;
+                    max-height: 0;
+                    opacity: 0;
+                    transition: all 0.5s ease;
+                    color: var(--text-muted);
+                    font-size: 1.05rem;
+                    line-height: 1.8;
+                }
+                .premium-faq-item.active .premium-faq-body {
+                    padding: 0 35px 30px;
+                    max-height: 400px;
+                    opacity: 1;
+                }
+                @media (max-width: 992px) {
+                    .faq-grid { grid-template-columns: 1fr; }
+                    .faq-leftbox { position: relative; top: 0; margin-bottom: 40px; }
+                }
+            </style>
+            <div class="container faq-grid">
+                 <div class="faq-leftbox">
+                    <span class="section-tag" style="background: #fff5f2; color: #f97316;">Parent Answers</span>
+                    <h2 class="hero-title" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px;">Everything You Need To Know.</h2>
+                    <p style="opacity: 0.7; font-size: 1.1rem; line-height: 1.8; margin-bottom: 40px;">
+                        Parenting is an incredible journey, and picking the right educational environment is everything. We've compiled the top 10 most critical questions our community of mothers and fathers ask us.
+                    </p>
+                    
+                    <div style="background: white; padding: 40px; border-radius: 30px; box-shadow: var(--shadow-medium); position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: var(--accent-yellow); border-radius: 50%; opacity: 0.2;"></div>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-navy);">Still have doubts?</h4>
+                        <p style="opacity: 0.6; font-size: 1rem; line-height: 1.6; margin-bottom: 25px;">Our admission counselors are ready to help chart your child's growth map.</p>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%; justify-content: center; background: var(--primary-indigo); padding: 18px;">Contact Counselor</a>
+                    </div>
                 </div>
-                <div style="max-width: 900px; margin: 0 auto;">
-                    <div class="faq-item">
-                        <div class="faq-header">What is the age criteria for Nursery? <i class="fas fa-plus"></i></div>
-                        <div class="faq-body"><p>For the session 2024-25, child must be born between April 2020 and March 2021.</p></div>
+                
+                <div class="faq-list">
+                    <!-- Item 1 -->
+                    <div class="premium-faq-item">
+                        <div class="premium-faq-header">What is the exact age criteria for Nursery? <div class="icon-box"><i class="fas fa-plus"></i></div></div>
+                        <div class="premium-faq-body">For the session 2024-25, the child must be born between April 2020 and March 2021 as per the national mandate. We heavily focus on developmental readiness over strict age cutoffs when evaluating.</div>
                     </div>
-                    <div class="faq-item">
-                        <div class="faq-header">Do you provide secure school transport? <i class="fas fa-plus"></i></div>
-                        <div class="faq-body"><p>Yes, we have GPS-tracked secure buses with female attendants covering most of Gurgaon.</p></div>
+                    <!-- Item 2 -->
+                    <div class="premium-faq-item">
+                        <div class="premium-faq-header">Do you provide completely secure transport? <div class="icon-box"><i class="fas fa-plus"></i></div></div>
+                        <div class="premium-faq-body">Absolutely! Our modern fleet of AC buses features live GPS-tracking sent directly to your phone, female attendants permanently on board, and strict speed-governing locks covering major Gurgaon sectors.</div>
                     </div>
-                    <div class="faq-item">
-                        <div class="faq-header">What is the teacher-student ratio? <i class="fas fa-plus"></i></div>
-                        <div class="faq-body"><p>We maintain a prime 1:15 ratio to ensure deep personal mentoring for every child.</p></div>
+                    <!-- Item 3 -->
+                    <div class="premium-faq-item">
+                        <div class="premium-faq-header">What is the teacher-student classroom ratio? <div class="icon-box"><i class="fas fa-plus"></i></div></div>
+                        <div class="premium-faq-body">We maintain a strict 1:15 ratio with one lead mentor and one assistant teacher in every room. This avoids crowd-teaching and allows for deep, personal mentoring and constant emotional supervision.</div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="premium-faq-item">
+                        <div class="premium-faq-header">How do you manage device screen time? <div class="icon-box"><i class="fas fa-plus"></i></div></div>
+                        <div class="premium-faq-body">Technology is purely a tool here, not a babysitter. 80% of our day relies on kinetic, hands-on learning outside. The 20% dedicated to tablets uses exclusive logic-building apps in heavily monitored short intervals.</div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="premium-faq-item">
+                        <div class="premium-faq-header">How do you handle severe separation anxiety? <div class="icon-box"><i class="fas fa-plus"></i></div></div>
+                        <div class="premium-faq-body">The first two weeks allow mothers to sit just outside the learning pods. Our psychologists utilize specific transitional play therapy to ease your child slowly into forming independent trust with their mentor.</div>
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="premium-faq-item">
+                        <div class="premium-faq-header">Are daily meals provided and nutritious? <div class="icon-box"><i class="fas fa-plus"></i></div></div>
+                        <div class="premium-faq-body">Yes. We have an in-house organic kitchen curated by a pediatric nutritionist. All meals are purely vegetarian, hot, varied daily, and free of any processed refined sugars or generic artificial flavors.</div>
+                    </div>
+                    <!-- Item 7 -->
+                    <div class="premium-faq-item">
+                        <div class="premium-faq-header">What is your core approach to discipline? <div class="icon-box"><i class="fas fa-plus"></i></div></div>
+                        <div class="premium-faq-body">We reject harsh or traditional punishments. We use 'positive reinforcement' and 'restorative reflection corners'. We guide children to comprehend WHY an action was wrong, building intrinsic moral compasses instead of fear.</div>
+                    </div>
+                    <!-- Item 8 -->
+                    <div class="premium-faq-item">
+                        <div class="premium-faq-header">How heavily involved can parents be? <div class="icon-box"><i class="fas fa-plus"></i></div></div>
+                        <div class="premium-faq-body">Extremely! We have monthly "Parent Coffee Mornings", "Hero Reading Days" where you read to the class, and a dedicated mobile app that serves you real-time picture updates of their daily milestones while you are at work.</div>
+                    </div>
+                    <!-- Item 9 -->
+                    <div class="premium-faq-item">
+                        <div class="premium-faq-header">How is a child's academic progress tracked? <div class="icon-box"><i class="fas fa-plus"></i></div></div>
+                        <div class="premium-faq-body">There are zero traditional written exams in the primary blocks. We generate deep "Milestone Portfolios" based on observations during play, puzzle-solving speeds, and artistic expressions to gauge cognitive growth.</div>
+                    </div>
+                    <!-- Item 10 -->
+                    <div class="premium-faq-item">
+                        <div class="premium-faq-header">Do you have an after-school care program? <div class="icon-box"><i class="fas fa-plus"></i></div></div>
+                        <div class="premium-faq-body">For working parents, our "Sunset Hub" runs until 5:30 PM. It is not just babysitting daycare; the children participate in independent reading, instrumental music access, and calm wind-down yoga before going home.</div>
                     </div>
                 </div>
             </div>
+            
+            <script>
+                // Exclusive Accordion Logic - opens one at a time and toggles cross icon
+                document.querySelectorAll('.premium-faq-header').forEach(header => {
+                    header.addEventListener('click', () => {
+                        const item = header.parentElement;
+                        const wasActive = item.classList.contains('active');
+                        // Close all others seamlessly
+                        document.querySelectorAll('.premium-faq-item').forEach(i => i.classList.remove('active'));
+                        if (!wasActive) {
+                            item.classList.add('active');
+                        }
+                    });
+                });
+            </script>
         </section>
 
         <!-- 9. CONTACT US SECTION (Improved Layout) -->
-        <section class="reveal" style="background-color: #f8fafc; overflow: hidden;">
+        <section class="reveal" style="background: linear-gradient(135deg, #f8fafc, #eff6ff); padding-top: 50px; overflow: hidden;">
             <div class="container grid-2" style="gap: 120px; align-items: center;">
                 <div style="padding-right: 20px;">
                     <span class="section-tag" style="background: white; color: var(--primary-indigo);">Reach Out</span>
@@ -313,7 +785,7 @@
         if (contactForm) {
             contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
-                alert('Thank you! Your message has been sent to Edukids. Our coordinator will contact you shortly.');
+                alert('Thank you! Your message has been sent to Udaaan School. Our coordinator will contact you shortly.');
                 contactForm.reset();
             });
         }

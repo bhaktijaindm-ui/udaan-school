@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latest Blog & News | Edukids India | Parenting Wisdom</title>
+    <title>Latest Blog & News | Udaaan School India | Parenting Wisdom</title>
     <meta name="description" content="Read our latest insights on parenting, STEM education, and school updates. Helping Gurgaon parents raise happy, healthy kids.">
     <meta name="keywords" content="health tips for kids, math for preschoolers, parenting Gurgaon, school news">
-    <meta name="author" content="Edukids Parent Hub">
+    <meta name="author" content="Udaaan School Parent Hub">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Latest Blog & News | Edukids India">
+    <meta property="og:title" content="Latest Blog & News | Udaaan School India">
     <meta property="og:description" content="Expert parenting tips and primary school success stories.">
     <meta property="og:image" content="blog_post.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .blog-hero {
-            background: var(--primary-navy);
-            color: var(--white);
-            padding: 120px 5%;
-            text-align: center;
-        }
+        /* Refactored blog-hero */
 
         .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; }
         .blog-card { background: white; border-radius: 30px; overflow: hidden; box-shadow: var(--shadow-soft); transition: var(--transition); height: 100%; display: flex; flex-direction: column; }
@@ -37,13 +32,53 @@
 <body>
     <header id="header-placeholder"></header>
 
-    <div class="blog-hero">
-        <h1 class="hero-title" style="color: var(--white); font-size: 4rem;">Edukids Insight</h1>
-        <p style="opacity: 0.8; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Expert parenting tips, school updates, and success stories from our vibrant Indian community.</p>
+    <!-- GLOBAL FLOATING SCHOOL ELEMENTS (Aesthetic Overlay) -->
+    <style>
+        body { position: relative; } 
+        .global-floating-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 1; overflow: hidden; }
+        .container { position: relative; z-index: 10; }
+        @keyframes wander1 { 0% { transform: translate(0, 0) rotate(0deg); } 33% { transform: translate(3vw, -5vh) rotate(15deg); } 66% { transform: translate(-1.5vw, 6vh) rotate(-10deg); } 100% { transform: translate(0, 0) rotate(0deg); } }
+        .wander-a { animation: wander1 25s ease-in-out infinite; }
+        .f-char { position: absolute; font-family: 'Outfit', sans-serif; font-weight: 900; opacity: 0.15; }
+    </style>
+    <div class="global-floating-overlay">
+        <!-- Spattered fully across the height uniquely for the blog page -->
+        <i class="fas fa-lightbulb wander-a" style="position: absolute; color: var(--accent-orange); font-size: 3.5rem; opacity: 0.15; top: 8%; left: 15%;"></i>
+        <div class="f-char wander-a" style="font-size: 5.5rem; color: var(--primary-indigo); top: 18%; right: 18%;">Ideas</div>
+        <i class="fas fa-book-open wander-a" style="position: absolute; color: var(--accent-mint); font-size: 4rem; opacity: 0.15; top: 32%; left: 12%;"></i>
+        <div class="f-char wander-a" style="font-size: 6rem; color: var(--secondary-purple); top: 48%; right: 25%;">Learn</div>
+        <i class="fas fa-pen-fancy wander-a" style="position: absolute; color: var(--accent-yellow); font-size: 3.5rem; opacity: 0.15; top: 62%; left: 8%;"></i>
+        <div class="f-char wander-a" style="font-size: 4.5rem; color: var(--accent-orange); top: 76%; right: 10%;">Read</div>
+        <i class="fas fa-quote-right wander-a" style="position: absolute; color: #38bdf8; font-size: 4rem; opacity: 0.15; top: 88%; left: 30%;"></i>
+        <div class="f-char wander-a" style="font-size: 5rem; color: var(--primary-navy); top: 96%; right: 40%;">News</div>
     </div>
 
+    <!-- REDESIGNED HERO GRID (Replaces Flat Navy Block) -->
+    <section class="blog-hero" style="background: linear-gradient(135deg, #f8fafc, #eef2ff); padding: 80px 5% 120px 5%; position: relative; overflow: hidden;">
+        <div class="container grid-2" style="align-items: center; gap: 60px; position: relative; z-index: 2;">
+            <div style="text-align: left;">
+                <span class="section-tag" style="background: white; color: var(--primary-indigo); border: 1px solid #e0e7ff;">The Udaaan Journal</span>
+                <h1 class="hero-title" style="color: var(--primary-navy); font-size: 4.2rem; line-height: 1.1; margin-top: 20px;">Insights & <br><span style="color: var(--primary-indigo);">Parenting</span> Wisdom</h1>
+                <p style="font-size: 1.25rem; margin-top: 25px; color: var(--text-muted); line-height: 1.8;">Dive into expert parenting tips, modern STEM education strategies, and inspiring success stories from our vibrant Indian community.</p>
+                <div style="margin-top: 40px; display: flex; gap: 20px; align-items: center;">
+                    <button class="btn btn-primary" style="background: var(--primary-indigo); padding: 18px 40px; border-radius: 12px; font-weight: 800; color: white; border: none; cursor: pointer;" onclick="document.querySelector('.blog-grid').scrollIntoView({behavior: 'smooth'})">Read Latest Articles</button>
+                    <a href="#subscribe" style="font-weight: 800; color: var(--accent-orange); text-decoration: none; padding-left: 10px;">Subscribe to Newsletter <i class="fas fa-bell"></i></a>
+                </div>
+            </div>
+            <div class="hero-images-container floating" style="position: relative; width: 100%;">
+                <img src="blog_post.png" alt="Featured Article" style="width: 100%; max-height: 480px; object-fit: cover; border-radius: 40px; box-shadow: var(--shadow-heavy); border: 15px solid white;">
+                <div class="float-stats stat-badge-1" style="bottom: -20px; left: -20px; background: white; color: var(--primary-navy);"><i class="fas fa-fire" style="color: #ef4444;"></i> Trending Post</div>
+                <div class="float-stats stat-badge-2" style="top: -20px; right: -20px; background: white; color: var(--primary-navy);"><i class="fas fa-book-reader" style="color: var(--primary-indigo);"></i> 5 Min Read</div>
+            </div>
+        </div>
+        
+        <!-- Decorative Ghost Gradients (Background) -->
+        <div style="position: absolute; width: 600px; height: 600px; background: var(--accent-mint); opacity: 0.15; border-radius: 50%; top: -150px; right: -150px; filter: blur(80px); z-index: 1;"></div>
+        <div style="position: absolute; width: 500px; height: 500px; background: var(--primary-indigo); opacity: 0.1; border-radius: 50%; bottom: -150px; left: -100px; filter: blur(80px); z-index: 1;"></div>
+    </section>
+
     <!-- MAIN BLOGS -->
-    <section>
+    <section style="padding-bottom: 40px;">
         <div class="container">
             <div class="text-center mb-60">
                  <span class="section-tag" style="background: var(--secondary-purple);">Latest Updates</span>
@@ -51,76 +86,77 @@
             </div>
 
             <div class="blog-grid">
-                <div class="blog-card reveal">
+                <div class="blog-card reveal" onclick="window.location.href='making-math-fun-for-indian-kids-at-home.html';" style="cursor: pointer;">
                     <img src="blog_post.png" alt="Math" class="blog-img">
                     <div class="blog-content">
                         <span class="blog-meta">Mar 20, 2024 | Parenting Tips</span>
                         <h3>Making Math Fun for Indian Kids At Home</h3>
                         <p>Discover how to use spices (cloves, cardamom) and grains to teach early counting and sensory math to your nursery child.</p>
-                        <a href="#" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                        <a href="making-math-fun-for-indian-kids-at-home.html" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="blog-card reveal">
+                <div class="blog-card reveal" onclick="window.location.href='udaaan-school-wins-national-eco-shield-stem-award.html';" style="cursor: pointer;">
                     <img src="blog_post.png" alt="STEM" class="blog-img" style="filter: hue-rotate(45deg);">
                     <div class="blog-content">
                         <span class="blog-meta">Mar 15, 2024 | School News</span>
-                        <h3>Edukids Wins National "Eco-Shield" STEM Award</h3>
+                        <h3>Udaaan School Wins National "Eco-Shield" STEM Award</h3>
                         <p>Our students designed a low-cost rainwater harvesting model for schools, winning 1st place in the Gurgaon Region Science Expo.</p>
-                        <a href="#" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                        <a href="udaaan-school-wins-national-eco-shield-stem-award.html" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- More -->
-                <div class="blog-card reveal">
+                <div class="blog-card reveal" onclick="window.location.href='decoding-emotional-intelligence-for-preschoolers.html';" style="cursor: pointer;">
                     <img src="blog_post.png" alt="Emotional" class="blog-img" style="filter: hue-rotate(180deg);">
                     <div class="blog-content">
                         <span class="blog-meta">Mar 10, 2024 | Child Development</span>
                         <h3>Decoding Emotional Intelligence for Preschoolers</h3>
                         <p>Why EQ is more important than IQ for the success of your child in the modern competitive environment of India.</p>
-                        <a href="#" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                        <a href="decoding-emotional-intelligence-for-preschoolers.html" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="blog-card reveal">
+                <div class="blog-card reveal" onclick="window.location.href='healthy-tiffin-ideas-the-indian-parents-guide.html';" style="cursor: pointer;">
                     <img src="blog_post.png" alt="Nutrition" class="blog-img" style="filter: sepia(0.5);">
                     <div class="blog-content">
                         <span class="blog-meta">Mar 05, 2024 | Health</span>
                         <h3>Healthy Tiffin Ideas: The Indian Parents Guide</h3>
                         <p>5 quick, healthy, and kid-friendly tiffin recipes that are based on traditional Indian nutrition and modern needs.</p>
-                        <a href="#" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                        <a href="healthy-tiffin-ideas-the-indian-parents-guide.html" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                 <div class="blog-card reveal">
+                 <div class="blog-card reveal" onclick="window.location.href='summer-art-fest-preparing-your-child.html';" style="cursor: pointer;">
                     <img src="blog_post.png" alt="Activity" class="blog-img" style="filter: saturate(1.5);">
                     <div class="blog-content">
                         <span class="blog-meta">Mar 01, 2024 | Activities</span>
                         <h3>Summer Art Fest: Preparing Your Child</h3>
                         <p>Guidelines for our upcoming Summer Art Fest and how to encourage your child to express themselves through clay.</p>
-                        <a href="#" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                        <a href="summer-art-fest-preparing-your-child.html" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                 <div class="blog-card reveal">
+                 <div class="blog-card reveal" onclick="window.location.href='meet-our-teachers-heart-of-udaaan-school.html';" style="cursor: pointer;">
                     <img src="blog_post.png" alt="Success" class="blog-img" style="filter: grayscale(0.5);">
                     <div class="blog-content">
                         <span class="blog-meta">Feb 25, 2024 | Community</span>
-                        <h3>Meet Our Teachers: Heart of Edukids</h3>
+                        <h3>Meet Our Teachers: Heart of Udaaan School</h3>
                         <p>An interview with our Senior Child Psychologist about her 15-year journey in early childhood education.</p>
-                        <a href="#" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                        <a href="meet-our-teachers-heart-of-udaaan-school.html" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SUBSCRIBE -->
-    <section>
-        <div class="container">
-            <div style="background: var(--accent-yellow); padding: 80px; border-radius: 40px; text-align: center;">
-                 <h2 class="hero-title" style="font-size: 3rem; margin-bottom: 20px;">Never Miss an Update</h2>
-                 <p style="margin-bottom: 40px; opacity: 0.7; font-weight: 600;">Get weekly parenting tips and school updates directly in your inbox.</p>
-                 <form style="display: flex; gap: 15px; max-width: 600px; margin: 0 auto;">
-                    <input type="email" placeholder="email@address.com" style="flex: 1; padding: 18px 25px; border-radius: 12px; border: 2px solid white; font-family: inherit;">
-                    <button class="btn btn-primary" style="background: var(--primary-navy); border-radius: 12px;">Sign Up</button>
-                 </form>
-            </div>
+    <!-- SUBSCRIBE CTA (Premium) -->
+    <section class="reveal" style="background: var(--primary-navy); color: white; padding: 60px 40px; text-align: center; border-radius: 40px; margin: 20px 5% 100px; position: relative; overflow: hidden; z-index: 5;">
+        <div style="position: absolute; top: -50%; left: -10%; width: 400px; height: 400px; background: var(--primary-indigo); filter: blur(80px); opacity: 0.5; border-radius: 50%;"></div>
+        <div style="position: absolute; bottom: -50%; right: -10%; width: 400px; height: 400px; background: var(--accent-orange); filter: blur(80px); opacity: 0.3; border-radius: 50%;"></div>
+        
+        <div class="container" style="position: relative; z-index: 2; max-width: 800px; margin: 0 auto;">
+             <h2 class="hero-title" style="font-size: 3rem; margin-bottom: 20px; color: white;">Never Miss an Update</h2>
+             <p style="font-size: 1.15rem; margin-bottom: 40px; opacity: 0.8; line-height: 1.6;">Get weekly parenting tips, school announcements, and success stories shipped directly to your inbox.</p>
+             <form style="display: flex; gap: 15px; max-width: 600px; margin: 0 auto; flex-wrap: wrap;">
+                <input type="email" placeholder="Enter your email address..." required style="flex: 1; min-width: 250px; padding: 18px 25px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white; font-family: inherit; font-size: 1rem; outline: none;">
+                <button class="btn btn-primary" style="background: var(--accent-orange); border-radius: 12px; padding: 18px 40px; font-weight: 800; border: none; cursor: pointer; color: white;">Subscribe</button>
+             </form>
         </div>
     </section>
 
